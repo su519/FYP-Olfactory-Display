@@ -1,138 +1,124 @@
-/*
-  WiFi Web Server
-
- A simple web server that shows the value of the analog input pins.
-
- This example is written for a network using WPA encryption. For
- WEP or WPA, change the WiFi.begin() call accordingly.
-
- Circuit:
- * Analog inputs attached to pins A0 through A5 (optional)
-
- created 13 July 2010
- by dlf (Metodo2 srl)
- modified 31 May 2012
- by Tom Igoe
-
- */
-
-#include <SPI.h>
 #include <WiFiNINA.h>
 
-
-#include "arduino_secrets.h" 
-///////please enter your sensitive data in the Secret tab/arduino_secrets.h
-char ssid[] = "Selin";        // your network SSID (name)
-char pass[] = "selinuygun";    // your network password (use for WPA, or use as key for WEP)
-int keyIndex = 0;                 // your network key index number (needed only for WEP)
-
+char ssid[] = "Selin";
+char pass[] = "selinuygun";
 int status = WL_IDLE_STATUS;
 
 WiFiServer server(80);
+bool start = false;
+bool scent_code = false;
 
 void setup() {
-  //Initialize serial and wait for port to open:
   Serial.begin(9600);
-  while (!Serial) {
-    ; // wait for serial port to connect. Needed for native USB port only
-  }
-  pinMode(LED_BUILTIN, OUTPUT);
-  pinMode(3, OUTPUT);
-  digitalWrite(3,LOW);
-  // check for the WiFi module:
-  if (WiFi.status() == WL_NO_MODULE) {
-    Serial.println("Communication with WiFi module failed!");
-    // don't continue
-    while (true);
-  }
-
-  String fv = WiFi.firmwareVersion();
-  if (fv < WIFI_FIRMWARE_LATEST_VERSION) {
-    Serial.println("Please upgrade the firmware");
-  }
-
-  // attempt to connect to WiFi network:
+  
   while (status != WL_CONNECTED) {
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(ssid);
-    // Connect to WPA/WPA2 network. Change this line if using open or WEP network:
     status = WiFi.begin(ssid, pass);
-
-    // wait 10 seconds for connection:
     delay(1000);
   }
+  
+  Serial.print("Connected to WiFi network with IP Address: ");
+  Serial.println(WiFi.localIP());
+  
   server.begin();
-  // you're connected now, so print out the status:
-  printWifiStatus();
+  pinMode(2,OUTPUT);
+  pinMode(3,OUTPUT);
+  pinMode(4,OUTPUT);
+  pinMode(5,OUTPUT);
+  pinMode(6,OUTPUT);
+  pinMode(7,OUTPUT);
+  pinMode(8,OUTPUT);
+  pinMode(9,OUTPUT);
 }
-
 
 void loop() {
-  // Check if a client has connected
   WiFiClient client = server.available();
-  if (!client) {
-    return;
+  if(client){
+    while (client.connected()) {
+      if (client.available()) {
+        char c = client.read();
+        Serial.write(c);
+        if(c == 'l'){
+            delay(100);
+            byte message1[] = {0x30, 0x30, 0x30, 0x31}; // Message "0001" as binary data
+            client.write(message1, sizeof(message1));
+            Serial.write(message1, sizeof(message1));
+            delay(100);
+            byte message2[] = {0x30, 0x30, 0x31, 0x30}; // Message "0010" as binary data
+            client.write(message2, sizeof(message2));
+            Serial.write(message2, sizeof(message2));
+            scent_code = true;
+            delay(100);
+            break;
+        }
+        if(scent_code == true){
+          if(c == 's'){
+            start = true;
+            break;
+          }
+          if(start == true){
+            // if(c == '1'){
+            //   Serial.println("1 received");
+            //   break;
+            // }
+            // else if(c == '2'){
+            //   Serial.println("2 received");
+            //   break;
+            // }else if(c == 'x'){
+            //   client.stop();
+            //   start = false;
+            //   break;
+            // }
+            if (c >= '2' && c <= '9') {
+              Serial.println("c: " + c);
+              int pin = c - '0'; // convert the character to an integer
+              if (client.available()) {
+                char next_c = client.read();
+                Serial.println("next_c: " + next_c);
+                if (next_c == '0' || next_c == '1' ||) {
+                  int value = next_c - '0'; // convert the character to an integer
+                  digitalWrite(pin, value);
+                  Serial.print("Pin ");
+                  Serial.print(pin);
+                  Serial.print(" set to ");
+                  Serial.println(value);
+                  break;
+                }
+                if (next_c == 0){
+                  int value = next_c - '0';
+                  digitalWrite(pin, value);
+                  break;
+                }else if(next_c == 1){
+                  generatePWM(c, 0.5);
+                  if(client.available()){
+                    break;
+                  }
+                  
+                }
+              }
+            }else if( c == 'x'){
+              client.stop();
+              // for (int j = 2; j <= 9; j++) {
+              //     digitalWrite(j, 0);
+              // }
+              start = false;
+              break;
+            }  
+          }
+        }
+      }
+    }
   }
-
-  // Wait until the client sends some data
-  Serial.println("New client connected");
-  while(!client.available()){
-    delay(1);
-  }
-
-  // Read the first line of the request
-  String request = client.readStringUntil('\r');
-  Serial.println(request);
- 
-
-  // Check if the request is to turn on the LED
-  if (request.indexOf("1") != -1) {
-    digitalWrite(LED_BUILTIN, HIGH);
-  }
-  // Check if the request is to turn off the LED
-  else if (request.indexOf("2") != -1) {
-    digitalWrite(LED_BUILTIN, LOW);
-  }
-
-  else if (request.indexOf("W") != -1) {
-    digitalWrite(3, HIGH);
-  }
-
-  else if (request.indexOf("S") != -1) {
-    digitalWrite(3, LOW);
-  }
-
-  // Return the response
-  client.println("HTTP/1.1 200 OK");
-  client.println("Content-Type: text/html");
-  client.println();
-  client.println("<!DOCTYPE HTML>");
-  client.println("<html>");
-  client.println("<head><title>Arduino LED Control</title></head>");
-  client.println("<body>");
-  client.println("<h1>Arduino LED Control</h1>");
-  client.println("<p>LED is now " + String(digitalRead(LED_BUILTIN)) + "</p>");
-  client.println("</body>");
-  client.println("</html>");
-
-  delay(1);
-  Serial.println("Client disconnected");
 }
 
+void generatePWM(int PWM_Pin, int dutyCycle) {
+  int high = (dutyCycle / 100.0) * 1000; // Calculate the high time based on duty cycle
+  int low = 1000 - high;             // Calculate the low time as the remaining time
 
-void printWifiStatus() {
-  // print the SSID of the network you're attached to:
-  Serial.print("SSID: ");
-  Serial.println(WiFi.SSID());
+  digitalWrite(PWM_PIN, HIGH); // Set the signal high for the specified high time
+  delayMicroseconds(high);
 
-  // print your board's IP address:
-  IPAddress ip = WiFi.localIP();
-  Serial.print("IP Address: ");
-  Serial.println(ip);
-
-  // print the received signal strength:
-  long rssi = WiFi.RSSI();
-  Serial.print("signal strength (RSSI):");
-  Serial.print(rssi);
-  Serial.println(" dBm");
+  digitalWrite(PWM_PIN, LOW); // Set the signal low for the specified low time
+  delayMicroseconds(low);
 }

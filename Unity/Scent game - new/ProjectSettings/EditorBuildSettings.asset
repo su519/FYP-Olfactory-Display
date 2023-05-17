@@ -4,5 +4,12 @@
 EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
-  m_Scenes: []
-  m_configObjects: {}
+  m_Scenes:
+  - enabled: 1
+    path: Assets/Scenes/Start Screen.unity
+    guid: 6acf9582990e7495292b2680a3eb28ac
+  - enabled: 1
+    path: Assets/Scenes/Scent Room.unity
+    guid: 7980be9828961c24f9c11b82339fc2b4
+  m_configObjects:
+    com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4773ec2393d0d4586b4ec61f0d67f925, type: 2}

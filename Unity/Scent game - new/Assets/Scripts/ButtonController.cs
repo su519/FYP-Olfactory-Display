@@ -31,7 +31,7 @@ public class ButtonController : MonoBehaviour
         startButton.interactable = false;
 
         // Clear the binary codes list in case there are any old codes left over
-        arduinoComm.binaryCodes.Clear();
+        Arduinocommunication.binaryCodes.Clear();
 
         // Start a coroutine to check for binary codes
         StartCoroutine(CheckForBinaryCodes());
@@ -47,7 +47,7 @@ public class ButtonController : MonoBehaviour
         // Loop through the binary codes in the dictionary and check if they have been received
         foreach (KeyValuePair<string, string> entry in ballCodeDict)
         {
-            if (!arduinoComm.binaryCodes.Contains(entry.Value))
+            if (!Arduinocommunication.binaryCodes.Contains(entry.Value))
             {
                 allBinaryCodesReceived = false;
                 break;
@@ -58,6 +58,7 @@ public class ButtonController : MonoBehaviour
         if (allBinaryCodesReceived)
         {
             startButton.interactable = true;
+            Debug.Log("List count: " + Arduinocommunication.binaryCodes.Count);
         }
     }
 

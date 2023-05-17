@@ -75,7 +75,8 @@ public class Arduinocommunication : MonoBehaviour
     //private bool binary = false;
     //public int atomNo;
 
-    public List<string> binaryCodes = new List<string>(); // List to store the binary codes
+    public static List<string> binaryCodes = new List<string>();
+    // List to store the binary codes
 
     private void Start()
     {
