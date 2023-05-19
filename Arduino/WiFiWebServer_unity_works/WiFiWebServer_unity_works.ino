@@ -71,37 +71,30 @@ void loop() {
             //   break;
             // }
             if (c >= '2' && c <= '9') {
-              Serial.println("c: " + c);
               int pin = c - '0'; // convert the character to an integer
               if (client.available()) {
                 char next_c = client.read();
-                Serial.println("next_c: " + next_c);
-                if (next_c == '0' || next_c == '1' ||) {
-                  int value = next_c - '0'; // convert the character to an integer
-                  digitalWrite(pin, value);
+                if (next_c == '0' || next_c == '1' || next_c == '2') {
+                  int value = next_c - '0'; 
                   Serial.print("Pin ");
                   Serial.print(pin);
                   Serial.print(" set to ");
                   Serial.println(value);
-                  break;
-                }
-                if (next_c == 0){
-                  int value = next_c - '0';
-                  digitalWrite(pin, value);
-                  break;
-                }else if(next_c == 1){
-                  generatePWM(c, 0.5);
-                  if(client.available()){
+                  if (value == 0){
+                    digitalWrite(pin, value);
+                    break;
+                  } else if(value == 1){
+                    generatePWM(pin,0.05,client);
                     break;
                   }
-                  
+                  break;
                 }
               }
             }else if( c == 'x'){
               client.stop();
-              // for (int j = 2; j <= 9; j++) {
-              //     digitalWrite(j, 0);
-              // }
+              for (int j = 2; j <= 9; j++) {
+                  digitalWrite(j, 0);
+              }
               start = false;
               break;
             }  
@@ -112,13 +105,16 @@ void loop() {
   }
 }
 
-void generatePWM(int PWM_Pin, int dutyCycle) {
+void generatePWM(int PWM_Pin, int dutyCycle, WiFiClient client) {
   int high = (dutyCycle / 100.0) * 1000; // Calculate the high time based on duty cycle
   int low = 1000 - high;             // Calculate the low time as the remaining time
+  while(!client.available()){
+    digitalWrite(PWM_Pin, HIGH); // Set the signal high for the specified high time
+    Serial.println(1);
+    delayMicroseconds(high);
 
-  digitalWrite(PWM_PIN, HIGH); // Set the signal high for the specified high time
-  delayMicroseconds(high);
-
-  digitalWrite(PWM_PIN, LOW); // Set the signal low for the specified low time
-  delayMicroseconds(low);
+    digitalWrite(PWM_Pin, LOW); // Set the signal low for the specified low time
+    Serial.println(0);
+    delayMicroseconds(low);
+  }
 }
