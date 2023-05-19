@@ -41,16 +41,35 @@ void loop() {
         Serial.write(c);
         if(c == 'l'){
             delay(100);
-            byte message1[] = {0x30, 0x30, 0x30, 0x31}; // Message "0001" as binary data
-            client.write(message1, sizeof(message1));
-            Serial.write(message1, sizeof(message1));
-            delay(100);
-            byte message2[] = {0x30, 0x30, 0x31, 0x30}; // Message "0010" as binary data
-            client.write(message2, sizeof(message2));
-            Serial.write(message2, sizeof(message2));
+            // byte message1[] = {0x30, 0x30, 0x30, 0x31}; // Message "0001" as binary data
+            // client.write(message1, sizeof(message1));
+            // Serial.write(message1, sizeof(message1));
+            // delay(100);
+            // byte message2[] = {0x30, 0x30, 0x31, 0x30}; // Message "0010" as binary data
+            // client.write(message2, sizeof(message2));
+            // Serial.write(message2, sizeof(message2));
+            unsigned long binary = 0b111101111100010000UL;
+
+            // Convert binary to string
+            String binaryString = String(binary, BIN);
+
+            // Create a byte array to hold the string data
+            byte message[binaryString.length()];
+
+            // Copy the string characters to the byte array
+            for (int i = 0; i < binaryString.length(); i++) {
+              message[i] = binaryString[i];
+            }
+
+            // Send the byte array to the client
+            client.write(message, sizeof(message));
+            Serial.write(message, sizeof(message));
+
             scent_code = true;
             delay(100);
             break;
+
+
         }
         if(scent_code == true){
           if(c == 's'){

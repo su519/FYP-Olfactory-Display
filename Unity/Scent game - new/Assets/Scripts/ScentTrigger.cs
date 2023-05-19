@@ -6,19 +6,22 @@ using System.Net.Sockets;
 
 public class ScentTrigger : MonoBehaviour
 {
-    public Arduinocommunication arduinoComm; // Reference to the Arduino communication script
+    public Arduinocommunication arduinoComm;
 
-    private bool isLemonInside = false; // Flag to track whether the ball is inside the collider
+    private bool isLemonInside = false;
     private bool isLavenderInside = false;
     private int LemonIndex;
     private int LavenderIndex;
     string on = "1";
     string off = "0";
 
+    //111 101 111 100 010 000
+
+
     private void Start()
     {
-        LemonIndex = Arduinocommunication.binaryCodes.IndexOf("0001") + 2;
-        LavenderIndex = Arduinocommunication.binaryCodes.IndexOf("0010") + 2;
+        LemonIndex = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
+        LavenderIndex = Arduinocommunication.binaryCodes.IndexOf("010") + 2;
 
 
     }

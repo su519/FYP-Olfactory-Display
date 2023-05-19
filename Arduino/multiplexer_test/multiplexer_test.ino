@@ -19,7 +19,7 @@ void setup() {
 void loop() {
   if (count == 0) {
 
-    int binary = 0;
+    unsigned long binary = 0;
 
     for (int add = 0; add <= 7; add = add + 1) {
       digitalWrite(A, (add & 0b001) >> 0);

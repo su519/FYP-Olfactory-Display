@@ -17,8 +17,8 @@ public class ButtonController : MonoBehaviour
     {
         // Disable the start button initially
         startButton.interactable = false;
-        ballCodeDict.Add("Lemon", "0001");
-        ballCodeDict.Add("Lavender", "0010");
+        ballCodeDict.Add("Lemon", "000");
+        ballCodeDict.Add("Lavender", "010");
     }
 
     public void OnScentLoadingButtonClick()
