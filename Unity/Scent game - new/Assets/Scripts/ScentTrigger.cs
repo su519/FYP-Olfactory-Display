@@ -12,8 +12,8 @@ public class ScentTrigger : MonoBehaviour
     private bool isLavenderInside = false;
     private int LemonIndex;
     private int LavenderIndex;
-    string on = "1";
-    string off = "0";
+    string on = "i";
+    string off = "o";
     private float dutyCycle = 0.5f;
     private float frequency = 1.0f;
 

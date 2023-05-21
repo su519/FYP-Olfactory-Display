@@ -12,14 +12,17 @@ public class PanelController : MonoBehaviour
     public GameObject nextButton;
     public GameObject returnButton;
     public TMP_Text scentText;
+    public GameObject backButton;
 
     private int[] scentPins;
 
     private int currentScent = 1;
     private int i;
 
-    string on = "1";
-    string off = "0";
+    string on = "i";
+    string off = "o";
+
+    string fan = "14";
 
     string message;
 
@@ -42,11 +45,13 @@ public class PanelController : MonoBehaviour
         scentText.gameObject.SetActive(false);
         returnButton.SetActive(false);
         startButton.SetActive(true);
+        backButton.SetActive(true);
     }
 
     public void StartGame()
     {
         startButton.SetActive(false);
+        backButton.SetActive(false);
         StartCoroutine(ReleaseScent());
     }
 
@@ -93,8 +98,15 @@ public class PanelController : MonoBehaviour
 
         scentText.text = "";
         yield return new WaitForSeconds(1f);
+
         scentText.text = "Clearing scent " + currentScent;
+        message = $"{fan}{on}";
+        arduinoComm.SendMessageToArduino(message);
         yield return new WaitForSeconds(5f);
+
+        message = $"{fan}{off}";
+        arduinoComm.SendMessageToArduino(message);
+
         scentText.gameObject.SetActive(false);
         releaseButton.SetActive(true);
         nextButton.SetActive(true);
