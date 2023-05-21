@@ -7,7 +7,11 @@ public class ButtonController : MonoBehaviour
 {
     public Arduinocommunication arduinoComm; // reference to the Arduinocommunication script
     public Button scentLoadingButton; // reference to the scent loading button
-    public Button startButton; // reference to the start button
+    public Button startGameButton; // reference to the start button
+    public Button startUserStudyButton;
+
+    public GameObject UserStudySection;
+    public GameObject MainSection;
 
     private bool binaryCode1Received = false; // flag to track if binary code 1 has been received
     private bool binaryCode2Received = false; // flag to track if binary code 2 has been received
@@ -16,7 +20,10 @@ public class ButtonController : MonoBehaviour
     private void Start()
     {
         // Disable the start button initially
-        startButton.interactable = false;
+        MainSection.SetActive(true);
+        UserStudySection.SetActive(false);
+        startGameButton.interactable = false;
+        startUserStudyButton.interactable = false;
         ballCodeDict.Add("Lemon", "000");
         ballCodeDict.Add("Lavender", "010");
     }
@@ -28,7 +35,8 @@ public class ButtonController : MonoBehaviour
 
         // Enable the scent loading button and disable the start button
         scentLoadingButton.interactable = false;
-        startButton.interactable = false;
+        startGameButton.interactable = false;
+        startUserStudyButton.interactable = false;
 
         // Clear the binary codes list in case there are any old codes left over
         Arduinocommunication.binaryCodes.Clear();
@@ -57,13 +65,14 @@ public class ButtonController : MonoBehaviour
         // Enable the start button if all binary codes have been received
         if (allBinaryCodesReceived)
         {
-            startButton.interactable = true;
+            startGameButton.interactable = true;
+            startUserStudyButton.interactable = true;
             Debug.Log("List count: " + Arduinocommunication.binaryCodes.Count);
         }
     }
 
 
-    //public void OnStartButtonClick()
+    //public void OnstartGameButtonClick()
     //{
     //    // Do something when the start button is clicked
     //    Debug.Log("Start button clicked");
