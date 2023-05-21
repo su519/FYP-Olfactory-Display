@@ -48,17 +48,18 @@ void loop() {
             // byte message2[] = {0x30, 0x30, 0x31, 0x30}; // Message "0010" as binary data
             // client.write(message2, sizeof(message2));
             // Serial.write(message2, sizeof(message2));
-            unsigned long binary = 0b111101111100010000UL;
+            //000 001 010 011 100 101
+            char binary[] = "000001010011100101";
 
             // Convert binary to string
-            String binaryString = String(binary, BIN);
+            // String binaryString = String(binary);
 
             // Create a byte array to hold the string data
-            byte message[binaryString.length()];
+            byte message[sizeof(binary)];
 
             // Copy the string characters to the byte array
-            for (int i = 0; i < binaryString.length(); i++) {
-              message[i] = binaryString[i];
+            for (int i = 0; i < sizeof(binary); i++) {
+              message[i] = binary[i];
             }
 
             // Send the byte array to the client
@@ -105,21 +106,3 @@ void loop() {
     }
   }
 }
-
-// void generatePWM(int PWM_Pin, float dutyCycle, WiFiClient client) {
-//   int high = (dutyCycle) * 10000; // Calculate the high time based on duty cycle
-//   int low = 10000 - high;             // Calculate the low time as the remaining time
-//   Serial.print("high: ");
-//   Serial.println(high);
-//   Serial.print("low: ");
-//   Serial.println(low);
-//   while(!client.available()){
-//     digitalWrite(PWM_Pin, HIGH); // Set the signal high for the specified high time
-//     Serial.println(1);
-//     delay(high);
-
-//     digitalWrite(PWM_Pin, LOW); // Set the signal low for the specified low time
-//     Serial.println(0);
-//     delay(low);
-//   }
-// }

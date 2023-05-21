@@ -11,4 +11,10 @@ public class userstudystart_menu : MonoBehaviour
         start_menu.state = 1;
         SceneManager.LoadScene("Start Screen");
     }
+
+    public void switchToScentIdentification()
+    {
+        SceneManager.LoadScene("1 Scent Identification");
+    }
+
 }

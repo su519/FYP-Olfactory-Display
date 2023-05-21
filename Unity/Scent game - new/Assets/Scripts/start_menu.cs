@@ -35,4 +35,10 @@ public class start_menu : MonoBehaviour
         UserStudySection.SetActive(true);
 
     }
+
+    public void BackToMainMenu()
+    {
+        MainSection.SetActive(true);
+        UserStudySection.SetActive(false);
+    }
 }

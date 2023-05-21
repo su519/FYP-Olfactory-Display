@@ -33,7 +33,8 @@ public class Arduinocommunication : MonoBehaviour
                 int bytesRead = stream.Read(data, 0, data.Length);
                 string message = System.Text.Encoding.ASCII.GetString(data, 0, bytesRead);
                 Debug.Log("Received message from Arduino: " + message);
-                for(int i = 0; i < message.Length ; i = i + 3) {
+                Debug.Log(message.Length);
+                for(int i = 0; i < 18 ; i = i + 3) {
                     string scent = message.Substring(i, 3); ;
                     binaryCodes.Add(scent);
                 }
