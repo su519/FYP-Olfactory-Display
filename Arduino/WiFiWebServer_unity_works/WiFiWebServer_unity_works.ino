@@ -7,8 +7,13 @@ int status = WL_IDLE_STATUS;
 
 WiFiServer server(80);
 bool start = false;
+bool study = false;
 bool scent_code = false;
 char str_pin[2] = {};
+int prev_c = 0;
+int user = 0;
+char c1;
+char c2;
 
 void setup() {
   Serial.begin(9600);
@@ -62,6 +67,10 @@ void loop() {
 
         }
         if(scent_code == true){
+          if(c == 'u'){
+            study = true;
+            break;
+          }
           if(c == 's'){
             start = true;
             break;
@@ -70,17 +79,21 @@ void loop() {
             // char c = client.read();
             if (c >= '1' && c <= '9') {
               int pin = c - '0'; // convert the character to an integer
-              Serial.println(pin);
+//              Serial.print("prev_c: ");
+//              Serial.println(prev_c);
+//              Serial.print("pin: ");
+//              Serial.println(pin);
+              Serial.print(c);
               if (client.available()) {
-                char c1 = client.read();
+                c1 = client.read();
+                Serial.println(c1);
                 if (c1 == 'i' || c1 == 'o' || (c1 >= '0' && c1 <= '9')) {
                   if (c1 >= '0' && c1 <= '9'){
                     if (client.available()) {
-                      char c2 = client.read();
+                      c2 = client.read();
                       str_pin[0] = c; 
                       str_pin[1] = c1; 
                       pin = atoi(str_pin);
-
                       if(c2 == 'i'){
                         Serial.print("Pin ");
                         Serial.print(pin);
@@ -103,6 +116,7 @@ void loop() {
                     Serial.print(" set to ");
                     Serial.println(1);
                     digitalWrite(pin, 1);
+                    prev_c = pin;
                     break;
                   }else if(c1 == 'o'){
                     Serial.print("Pin ");
@@ -110,22 +124,51 @@ void loop() {
                     Serial.print(" set to ");
                     Serial.println(0);
                     digitalWrite(pin, 0);
+                    prev_c = pin;
                     break;
                   }
                   break;
                 }
               }
+              
             }else if( c == 'x'){
               client.stop();
               for (int j = 2; j <= 14; j++) {
                   digitalWrite(j, 0);
               }
               start = false;
+              study = false;
               break;
-            }  
+            }else if(c == '0'){
+//              Serial.print(c);
+              if (client.available()) {
+                c1 = client.read();
+//                Serial.print(c1);
+                if (client.available()) {
+                  c2 = client.read();
+//                  Serial.println(c2);
+                }
+              }
+              
+              
+              int scentPin = c1 - '0';
+              int userPin = c2 - '0';
+              if(study == true){
+                log2csv(scentPin, userPin);
+                break;
+              }
+              break;
+            }
+
           }
         }
       }
     }
   }
+}
+
+void log2csv(int pin, int user){
+  Serial.print(pin);
+  Serial.print(',');
+  Serial.println(user);
 }

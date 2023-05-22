@@ -392,6 +392,7 @@
 "Assets/Scripts/ButtonController.cs"
 "Assets/Scripts/PanelController.cs"
 "Assets/Scripts/Random Useful Scripts/CharacterControllerHMDUpdater.cs"
+"Assets/Scripts/scentButtonController.cs"
 "Assets/Scripts/ScentTrigger.cs"
 "Assets/Scripts/start_menu.cs"
 "Assets/Scripts/userstudystart_menu.cs"

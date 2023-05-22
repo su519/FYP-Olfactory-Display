@@ -4493,7 +4493,6 @@ GameObject:
   - component: {fileID: 2026347670}
   - component: {fileID: 2026347669}
   - component: {fileID: 2026347668}
-  - component: {fileID: 2026347667}
   - component: {fileID: 2026347666}
   m_Layer: 5
   m_Name: Start User Study
@@ -4533,18 +4532,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 9b468c38ea49a4763b64e49607c317d3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &2026347667
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2026347664}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2d7ec232783f84901a13994fca069966, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &2026347668
@@ -4612,7 +4599,7 @@ MonoBehaviour:
           m_ObjectArgumentAssemblyTypeName: UnityEngine.Object, UnityEngine
           m_IntArgument: 0
           m_FloatArgument: 0
-          m_StringArgument: s
+          m_StringArgument: u
           m_BoolArgument: 0
         m_CallState: 2
 --- !u!114 &2026347669

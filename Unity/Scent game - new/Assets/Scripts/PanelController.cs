@@ -13,16 +13,21 @@ public class PanelController : MonoBehaviour
     public GameObject returnButton;
     public TMP_Text scentText;
     public GameObject backButton;
+    public GameObject scentList;
+    public static bool scentButtonPressed = false;
 
     private int[] scentPins;
 
     private int currentScent = 1;
-    private int i;
+
+    private bool start = false;
 
     string on = "i";
     string off = "o";
 
     string fan = "14";
+
+    public int activeScent;
 
     string message;
 
@@ -46,12 +51,23 @@ public class PanelController : MonoBehaviour
         returnButton.SetActive(false);
         startButton.SetActive(true);
         backButton.SetActive(true);
+        scentList.SetActive(false);
     }
 
     public void StartGame()
     {
-        startButton.SetActive(false);
-        backButton.SetActive(false);
+        if (!start)
+        {
+            start = true;
+            startButton.SetActive(false);
+            backButton.SetActive(false);
+            StartCoroutine(StartDelay());
+        }
+    }
+
+    private IEnumerator StartDelay()
+    {
+        yield return new WaitForSeconds(5f);
         StartCoroutine(ReleaseScent());
     }
 
@@ -87,9 +103,12 @@ public class PanelController : MonoBehaviour
         nextButton.SetActive(false);
         scentText.gameObject.SetActive(true);
         scentText.text = "Releasing scent " + currentScent;
+        activeScent = scentPins[currentScent - 1];
 
         message = $"{scentPins[currentScent-1]}{on}";
         arduinoComm.SendMessageToArduino(message);
+
+        
 
         yield return new WaitForSeconds(5f);
 
@@ -98,6 +117,13 @@ public class PanelController : MonoBehaviour
 
         scentText.text = "";
         yield return new WaitForSeconds(1f);
+
+        scentText.text = "Which scent are you smelling?";
+
+        scentList.SetActive(true);
+        yield return new WaitUntil(() => scentButtonPressed);
+        scentList.SetActive(false);
+        scentButtonPressed = false;
 
         scentText.text = "Clearing scent " + currentScent;
         message = $"{fan}{on}";
