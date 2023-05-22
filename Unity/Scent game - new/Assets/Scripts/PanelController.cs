@@ -22,6 +22,11 @@ public class PanelController : MonoBehaviour
 
     private bool start = false;
 
+    private bool again = false;
+
+    private int prev_index = 0;
+    int randomIndex;
+
     string on = "i";
     string off = "o";
 
@@ -73,6 +78,7 @@ public class PanelController : MonoBehaviour
 
     public void ReleaseAgain()
     {
+        again = true;
         StartCoroutine(ReleaseScent());
     }
 
@@ -99,20 +105,28 @@ public class PanelController : MonoBehaviour
 
     IEnumerator ReleaseScent()
     {
+        if (again == false){
+            randomIndex = UnityEngine.Random.Range(0, 8);
+        }
+        else
+        {
+            randomIndex = prev_index;
+        }
+
+        again = false;
+
         releaseButton.SetActive(false);
         nextButton.SetActive(false);
         scentText.gameObject.SetActive(true);
         scentText.text = "Releasing scent " + currentScent;
-        activeScent = scentPins[currentScent - 1];
+        activeScent = scentPins[randomIndex];
 
-        message = $"{scentPins[currentScent-1]}{on}";
+        message = $"{scentPins[randomIndex]}{on}";
         arduinoComm.SendMessageToArduino(message);
-
-        
 
         yield return new WaitForSeconds(5f);
 
-        message = $"{scentPins[currentScent - 1]}{off}";
+        message = $"{scentPins[randomIndex]}{off}";
         arduinoComm.SendMessageToArduino(message);
 
         scentText.text = "";
@@ -136,5 +150,7 @@ public class PanelController : MonoBehaviour
         scentText.gameObject.SetActive(false);
         releaseButton.SetActive(true);
         nextButton.SetActive(true);
+
+        prev_index = randomIndex;
     }
 }
