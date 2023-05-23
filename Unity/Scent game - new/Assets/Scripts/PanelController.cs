@@ -46,9 +46,9 @@ public class PanelController : MonoBehaviour
         scentPins[3] = Arduinocommunication.binaryCodes.IndexOf("011") + 2;
         scentPins[4] = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
         scentPins[5] = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
-        scentPins[6] = 2;
-        scentPins[7] = 3;
-        scentPins[8] = 4;
+        scentPins[6] = UnityEngine.Random.Range(2, 7);
+        scentPins[7] = UnityEngine.Random.Range(2, 7);
+        scentPins[8] = UnityEngine.Random.Range(2, 7);
 
         releaseButton.SetActive(false);
         nextButton.SetActive(false);
@@ -72,7 +72,7 @@ public class PanelController : MonoBehaviour
 
     private IEnumerator StartDelay()
     {
-        yield return new WaitForSeconds(5f);
+        yield return new WaitForSeconds(3f);
         StartCoroutine(ReleaseScent());
     }
 

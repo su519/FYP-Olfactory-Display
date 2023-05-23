@@ -83,10 +83,10 @@ void loop() {
 //              Serial.println(prev_c);
 //              Serial.print("pin: ");
 //              Serial.println(pin);
-              Serial.print(c);
+//              Serial.print(c);
               if (client.available()) {
                 c1 = client.read();
-                Serial.println(c1);
+//                Serial.println(c1);
                 if (c1 == 'i' || c1 == 'o' || (c1 >= '0' && c1 <= '9')) {
                   if (c1 >= '0' && c1 <= '9'){
                     if (client.available()) {
@@ -95,34 +95,34 @@ void loop() {
                       str_pin[1] = c1; 
                       pin = atoi(str_pin);
                       if(c2 == 'i'){
-                        Serial.print("Pin ");
-                        Serial.print(pin);
-                        Serial.print(" set to ");
-                        Serial.println(1);
+//                        Serial.print("Pin ");
+//                        Serial.print(pin);
+//                        Serial.print(" set to ");
+//                        Serial.println(1);
                         digitalWrite(pin, 1);
                         break;
                       }else if(c2 == 'o'){
-                        Serial.print("Pin ");
-                        Serial.print(pin);
-                        Serial.print(" set to ");
-                        Serial.println(0);
+//                        Serial.print("Pin ");
+//                        Serial.print(pin);
+//                        Serial.print(" set to ");
+//                        Serial.println(0);
                         digitalWrite(pin, 0);
                         break;
                       }
                     }
                   }else if (c1 == 'i'){
-                    Serial.print("Pin ");
-                    Serial.print(pin);
-                    Serial.print(" set to ");
-                    Serial.println(1);
+//                    Serial.print("Pin ");
+//                    Serial.print(pin);
+//                    Serial.print(" set to ");
+//                    Serial.println(1);
                     digitalWrite(pin, 1);
                     prev_c = pin;
                     break;
                   }else if(c1 == 'o'){
-                    Serial.print("Pin ");
-                    Serial.print(pin);
-                    Serial.print(" set to ");
-                    Serial.println(0);
+//                    Serial.print("Pin ");
+//                    Serial.print(pin);
+//                    Serial.print(" set to ");
+//                    Serial.println(0);
                     digitalWrite(pin, 0);
                     prev_c = pin;
                     break;

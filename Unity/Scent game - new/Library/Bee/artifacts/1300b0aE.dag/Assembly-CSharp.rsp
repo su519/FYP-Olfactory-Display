@@ -390,6 +390,7 @@
 "Assets/Scripts/Arduinocommunication.cs"
 "Assets/Scripts/BluetoothLEController.cs"
 "Assets/Scripts/ButtonController.cs"
+"Assets/Scripts/IntensityController.cs"
 "Assets/Scripts/PanelController.cs"
 "Assets/Scripts/Random Useful Scripts/CharacterControllerHMDUpdater.cs"
 "Assets/Scripts/scentButtonController.cs"

@@ -17,4 +17,9 @@ public class userstudystart_menu : MonoBehaviour
         SceneManager.LoadScene("1 Scent Identification");
     }
 
+    public void switchToIntensityIdentification()
+    {
+        SceneManager.LoadScene("2 Intensity Identification");
+    }
+
 }
