@@ -27,6 +27,8 @@ public class scentButtonController : MonoBehaviour
         PanelController.scentButtonPressed = true;
     }
 
+
+
     public void RoseButtonPressed()
     {
         string message = $"{0}{PanelCont.activeScent}{RoseIndex}";

@@ -141,21 +141,31 @@ void loop() {
               break;
             }else if(c == '0'){
 //              Serial.print(c);
+              String detect = "00";
               if (client.available()) {
                 c1 = client.read();
-//                Serial.print(c1);
-                if (client.available()) {
-                  c2 = client.read();
-//                  Serial.println(c2);
+                if(c1 == '0'){
+                  while(client.available()){
+                    c2 = client.read();
+                    detect = detect + c2;
+                  }
+                  Serial.println(detect);
+                  break;
+                }else{
+                  if (client.available()) {
+                    c2 = client.read();
+    //                  Serial.println(c2);
+                  }
                 }
               }
               
-              
-              int scentPin = c1 - '0';
-              int userPin = c2 - '0';
-              if(study == true){
-                log2csv(scentPin, userPin);
-                break;
+              if(c1 != '0'){
+                int scentPin = c1 - '0';
+                int userPin = c2 - '0';
+                if(study == true){
+                  log2csv(scentPin, userPin);
+                  break;
+                }
               }
               break;
             }

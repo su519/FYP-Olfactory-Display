@@ -58,7 +58,7 @@ public class ScentTrigger : MonoBehaviour
         }
     }
 
-    private IEnumerator SendPwmMessageCoroutine(int index, float dutyCycle, bool isInside)
+    public IEnumerator SendPwmMessageCoroutine(int index, float dutyCycle, bool isInside)
     {
         float onTime = dutyCycle * (1.0f / frequency);
         float offTime = (1.0f - dutyCycle) * (1.0f / frequency);
@@ -82,6 +82,33 @@ public class ScentTrigger : MonoBehaviour
             isRunning = false;
         }
     }
+
+    //public IEnumerator SendPwmMessageTimedCoroutine(int index, float dutyCycle, bool isInside)
+    //{
+    //    float onTime = dutyCycle * (1.0f / frequency);
+    //    float offTime = (1.0f - dutyCycle) * (1.0f / frequency);
+
+    //    bool isRunning = true;
+
+    //    if (isInside)
+    //    {
+    //        while (isRunning)
+    //        {
+    //            string message = $"{index}{on}";
+    //            arduinoComm.SendMessageToArduino(message);
+    //            yield return new WaitForSeconds(onTime);
+
+    //            message = $"{index}{off}";
+    //            arduinoComm.SendMessageToArduino(message);
+    //            yield return new WaitForSeconds(offTime);
+
+    //        }
+    //    }
+    //    else
+    //    {
+    //        isRunning = false;
+    //    }
+    //}
 
 
     private void OnTriggerExit(Collider other)
