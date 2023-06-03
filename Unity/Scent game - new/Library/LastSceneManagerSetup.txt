@@ -4,16 +4,16 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/Start Screen.unity
-  isLoaded: 1
-  isActive: 1
+  isLoaded: 0
+  isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/1 Scent Identification.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/2 Intensity Identification.unity
-  isLoaded: 0
-  isActive: 0
+  isLoaded: 1
+  isActive: 1
   isSubScene: 0
 - path: Assets/Scenes/3 Environment and Object Identification.unity
   isLoaded: 0

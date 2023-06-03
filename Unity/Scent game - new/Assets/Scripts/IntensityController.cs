@@ -10,14 +10,16 @@ public class IntensityController : MonoBehaviour
 
     public GameObject startButton;
     public GameObject nextButton;
-    public GameObject intensityButton;
     public GameObject returnButton;
     public TMP_Text scentText;
     public GameObject backButton;
     public GameObject detectedButton;
     public static bool detectedButtonPressed = false;
-    public static bool intensityButtonPressed = false;
     public TMP_Text nextButtonText;
+    public GameObject Numbers;
+    private TMP_Text numberButtonText;
+
+    string numberValue;
 
     private int[] scentPins;
 
@@ -29,28 +31,25 @@ public class IntensityController : MonoBehaviour
 
     private int prev_index = 0;
     int Index;
-    int backgroundPin;
     int currentIndex;
 
     string on = "i";
     string off = "o";
-    int backgroundCount = 0;
+    int IntensityCount = 0;
     string fan = "14";
 
     public int activeScent;
-    private float ScentDutyCycle = 0.5f;
-    private float[] BackgroundDutyCycle;
+    private float[] ScentDutyCycle;
     private Coroutine scentPWMCoroutine;
-    private Coroutine backgroundPWMCoroutine;
+    bool numberButtonPressed = false;
     bool scentPWMactive = false;
-    bool backgroundPWMactive = false;
 
     string message;
 
     void Start()
     {
         scentPins = new int[9];
-        BackgroundDutyCycle = new float[5];
+        ScentDutyCycle = new float[5];
 
         scentPins[0] = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
         scentPins[1] = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
@@ -58,20 +57,20 @@ public class IntensityController : MonoBehaviour
         scentPins[3] = Arduinocommunication.binaryCodes.IndexOf("011") + 2;
         scentPins[4] = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
         scentPins[5] = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
-        scentPins[6] = UnityEngine.Random.Range(2, 7);
-        scentPins[7] = UnityEngine.Random.Range(2, 7);
-        scentPins[8] = UnityEngine.Random.Range(2, 7);
 
-        BackgroundDutyCycle[0] = 0.1f;
-        BackgroundDutyCycle[1] = 0.4f;
-        BackgroundDutyCycle[2] = 0.2f;
-        BackgroundDutyCycle[3] = 0.5f;
-        BackgroundDutyCycle[4] = 0.3f;
+        ScentDutyCycle[0] = 0.1f;
+        ScentDutyCycle[1] = 0.8f;
+        ScentDutyCycle[2] = 0.2f;
+        ScentDutyCycle[3] = 1;
+        ScentDutyCycle[4] = 0.3f;
+        ScentDutyCycle[5] = 0.6f;
+        ScentDutyCycle[6] = 0.7f;
+        ScentDutyCycle[7] = 0.4f;
+        ScentDutyCycle[8] = 0.9f;
+        ScentDutyCycle[9] = 0.5f;
 
-        backgroundPin = 9;
-
+        Numbers.SetActive(false);
         nextButton.SetActive(false);
-        intensityButton.SetActive(false);
         scentText.gameObject.SetActive(false);
         returnButton.SetActive(false);
         startButton.SetActive(true);
@@ -102,16 +101,15 @@ public class IntensityController : MonoBehaviour
     {
         //releaseButton.SetActive(false);
         detectedButtonPressed = false;
-        intensityButtonPressed = false;
+        numberButtonPressed = false;
         nextButton.SetActive(false);
-        intensityButton.SetActive(false);
         scentText.gameObject.SetActive(true);
         nextButtonText.text = "Next Intensity";
 
         Debug.Log("Current Scent: " + currentScent);
-        Debug.Log("Background: " + backgroundCount);
+        Debug.Log("Intensity: " + IntensityCount);
 
-        if (currentScent == 9)
+        if (currentScent == 6)
         {
 
             scentText.text = "End of trial";
@@ -121,10 +119,10 @@ public class IntensityController : MonoBehaviour
         else
         {
             Debug.Log("else");
-            if (backgroundCount == 5)
+            if (IntensityCount == 10)
             {
 
-                backgroundCount = 0;
+                IntensityCount = 0;
                 currentScent++;
             }
 
@@ -148,10 +146,8 @@ public class IntensityController : MonoBehaviour
 
         float startTime = Time.time;
         float elapsedTime = 0f;
-        scentPWMCoroutine = StartCoroutine(scentTrig.SendPwmMessageCoroutine(scentPins[currentScent - 1], ScentDutyCycle, true));
-        backgroundPWMCoroutine = StartCoroutine(scentTrig.SendPwmMessageCoroutine(backgroundPin, BackgroundDutyCycle[backgroundCount], true));
+        scentPWMCoroutine = StartCoroutine(scentTrig.SendPwmMessageCoroutine(scentPins[currentScent - 1], ScentDutyCycle[IntensityCount], true));
         scentPWMactive = true;
-        backgroundPWMactive = true;
 
         while (elapsedTime < 5f)
         {
@@ -160,28 +156,22 @@ public class IntensityController : MonoBehaviour
             if (detectedButtonPressed)
             {
                 scentPWMactive = false;
-                backgroundPWMactive = false;
                 StopCoroutine(scentPWMCoroutine);
-                StopCoroutine(backgroundPWMCoroutine);
-                message = $"{0}{0}{scentPins[currentScent - 1]}{BackgroundDutyCycle[backgroundCount]}{elapsedTime}";
+                message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{elapsedTime}";
                 arduinoComm.SendMessageToArduino(message);
+                Numbers.SetActive(true);
+                yield return new WaitUntil(() => numberButtonPressed);
                 break;
             }
         }
 
         if (elapsedTime > 5f && !detectedButtonPressed)
         {
-            message = $"{0}{0}{scentPins[currentScent - 1]}{BackgroundDutyCycle[backgroundCount]}{0}";
+            message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{0}";
             arduinoComm.SendMessageToArduino(message);
         }
 
         detectedButton.SetActive(false);
-
-        if (backgroundPWMactive)
-        {
-            StopCoroutine(backgroundPWMCoroutine);
-            backgroundPWMactive = false;
-        }
 
         if (scentPWMactive)
         {
@@ -190,8 +180,6 @@ public class IntensityController : MonoBehaviour
         }
 
         message = $"{scentPins[Index]}{off}";
-        arduinoComm.SendMessageToArduino(message);
-        message = $"{backgroundPin}{off}";
         arduinoComm.SendMessageToArduino(message);
 
         scentText.text = "";
@@ -207,12 +195,12 @@ public class IntensityController : MonoBehaviour
 
         scentText.gameObject.SetActive(false);
 
-        backgroundCount++;
-        Debug.Log("Background: " + backgroundCount);
+        IntensityCount++;
+        Debug.Log("Intensity: " + IntensityCount);
 
         nextButton.SetActive(true);
 
-        if (backgroundCount == 5)
+        if (IntensityCount == 5)
         {
             nextButtonText.text = "Next Scent";
         }
@@ -224,8 +212,11 @@ public class IntensityController : MonoBehaviour
         detectedButtonPressed = true;
     }
 
-    public void IntensityButtonPressed()
+    public void NumberButtonPressed()
     {
-        intensityButtonPressed = true;
+        numberButtonPressed = true;
+        numberButtonText = GetComponentInChildren<TMP_Text>();
+        numberValue = numberButtonText.text;
+        Debug.Log("Button Text: " + numberValue);
     }
 }
