@@ -1,0 +1,1029 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="E">
+  <design>
+    <source>/Users/selinuygun/Documents/KiCad/olfactory_display/olfactory_display.kicad_sch</source>
+    <date>2023 May 24, Wednesday 11:42:54</date>
+    <tool>Eeschema 7.0.2-0</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>olfactory_display.kicad_sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+        <comment number="5" value=""/>
+        <comment number="6" value=""/>
+        <comment number="7" value=""/>
+        <comment number="8" value=""/>
+        <comment number="9" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="J1">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>09c7e5cb-15eb-403f-a2e4-70e5284addf8</tstamps>
+    </comp>
+    <comp ref="J2">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>b72a181f-64fd-4462-aaec-71030790b5dc</tstamps>
+    </comp>
+    <comp ref="J3">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>9211aea2-35bd-4621-a60e-36ea6d396d65</tstamps>
+    </comp>
+    <comp ref="J4">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>70aecf8c-5c75-46e9-a498-60edbae4aa49</tstamps>
+    </comp>
+    <comp ref="J5">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>cb04ffba-dfa4-4965-9dd1-f444907ba535</tstamps>
+    </comp>
+    <comp ref="J6">
+      <value>Conn_02x04_Counter_Clockwise</value>
+      <footprint>Connector_PinSocket_2.54mm:PinSocket_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4aa81ff2-9b31-45cd-9a59-60b5cb5af7e3</tstamps>
+    </comp>
+    <comp ref="J7">
+      <value>Conn_01x04</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x04_P2.00mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x04" description="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>a98494be-70ba-4cd0-b1e7-d2f4f3f9fc94</tstamps>
+    </comp>
+    <comp ref="J8">
+      <value>Conn_01x02</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_01x02" description="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>4c9d3ba0-d46f-48cf-9f2e-ff8037b13463</tstamps>
+    </comp>
+    <comp ref="J9">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>154ca673-896d-405e-b8fc-4aa37e84a46f</tstamps>
+    </comp>
+    <comp ref="J10">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>02028392-8300-44d5-8fc1-c7b8de8e09ac</tstamps>
+    </comp>
+    <comp ref="J11">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>c7cd4ec4-2633-490b-9c98-8274b7d13584</tstamps>
+    </comp>
+    <comp ref="J12">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5f043025-2879-41b4-a72f-15cca72d157c</tstamps>
+    </comp>
+    <comp ref="J13">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5e8e9997-0d94-403b-a1a0-1820f7309dfd</tstamps>
+    </comp>
+    <comp ref="J14">
+      <value>Conn_02x04_Odd_Even</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_2x04_P2.54mm_Vertical</footprint>
+      <libsource lib="Connector_Generic" part="Conn_02x04_Odd_Even" description="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <property name="ki_keywords" value="connector"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>149baf6e-55ed-42f9-9b20-b04258bfa5fd</tstamps>
+    </comp>
+    <comp ref="K1">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0cc892bc-6981-4db3-b1ef-bd89a2d5a215</tstamps>
+    </comp>
+    <comp ref="K2">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>219021d9-c4ad-4a0f-96a8-304384ec4071</tstamps>
+    </comp>
+    <comp ref="K3">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>6a479c3b-7b3b-42fa-82ee-e0fcd0490a19</tstamps>
+    </comp>
+    <comp ref="K4">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0b9ad0ed-d4ac-4905-8f2b-5f1f040033a4</tstamps>
+    </comp>
+    <comp ref="K5">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>55667d1a-20ca-4f7c-a3b9-b74e47eb465c</tstamps>
+    </comp>
+    <comp ref="K6">
+      <value>HE751A0500</value>
+      <footprint>Relay_THT:HE751A0500</footprint>
+      <datasheet>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</datasheet>
+      <fields>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+      </fields>
+      <libsource lib="Relay" part="HE751A0500" description="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <property name="Height" value="5.5"/>
+      <property name="Manufacturer_Name" value="LITTELFUSE"/>
+      <property name="Manufacturer_Part_Number" value="HE751A0500"/>
+      <property name="Mouser Part Number" value="934-HE751A0500"/>
+      <property name="Mouser Price/Stock" value="https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D"/>
+      <property name="Arrow Part Number" value="HE751A0500"/>
+      <property name="Arrow Price/Stock" value="https://www.arrow.com/en/products/he751a0500/littelfuse"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ea6624b0-1dc2-48da-8b2a-a34dab56554c</tstamps>
+    </comp>
+    <comp ref="M1">
+      <value>Fan</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical</footprint>
+      <libsource lib="Motor" part="Fan" description="Fan"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Fan"/>
+      <property name="ki_keywords" value="Fan Motor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f3bdf2cf-24e0-4e65-b816-db797bd8d38f</tstamps>
+    </comp>
+    <comp ref="M2">
+      <value>Fan</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical</footprint>
+      <libsource lib="Motor" part="Fan" description="Fan"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Fan"/>
+      <property name="ki_keywords" value="Fan Motor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>89b45f7f-c2b2-4f19-9ca8-72a52b039c40</tstamps>
+    </comp>
+    <comp ref="M3">
+      <value>Fan</value>
+      <footprint>Connector_PinHeader_2.00mm:PinHeader_1x02_P2.00mm_Vertical</footprint>
+      <libsource lib="Motor" part="Fan" description="Fan"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Fan"/>
+      <property name="ki_keywords" value="Fan Motor"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>ef8528a3-8aad-4357-8eea-47e762205392</tstamps>
+    </comp>
+    <comp ref="U1">
+      <value>74LS151</value>
+      <footprint>Package_DIP:DIP-16_W10.16mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS151</datasheet>
+      <libsource lib="74xx" part="74LS151" description="Multiplexer 8 to 1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Multiplexer 8 to 1"/>
+      <property name="ki_keywords" value="TTL MUX8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>f82735f2-ce68-42f8-89a4-cd0fb13bafca</tstamps>
+    </comp>
+    <comp ref="U2">
+      <value>74LS151</value>
+      <footprint>Package_DIP:DIP-16_W10.16mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS151</datasheet>
+      <libsource lib="74xx" part="74LS151" description="Multiplexer 8 to 1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Multiplexer 8 to 1"/>
+      <property name="ki_keywords" value="TTL MUX8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>5d908550-ed42-485e-a1fd-f703c58f0b36</tstamps>
+    </comp>
+    <comp ref="U3">
+      <value>74LS151</value>
+      <footprint>Package_DIP:DIP-16_W10.16mm</footprint>
+      <datasheet>http://www.ti.com/lit/gpn/sn74LS151</datasheet>
+      <libsource lib="74xx" part="74LS151" description="Multiplexer 8 to 1"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Multiplexer 8 to 1"/>
+      <property name="ki_keywords" value="TTL MUX8"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>0fb60e7c-160d-4054-b141-790ca88df171</tstamps>
+    </comp>
+    <comp ref="XA1">
+      <value>Arduino_Nano_RP2040_Connect_Socket</value>
+      <footprint>PCM_arduino-library:Arduino_Nano_Every_Socket</footprint>
+      <datasheet>https://docs.arduino.cc/hardware/nano-rp2040-connect</datasheet>
+      <libsource lib="PCM_arduino-library" part="Arduino_Nano_RP2040_Connect_Socket" description="Socket for Arduino Nano RP2040 Connect"/>
+      <property name="Sheetname" value=""/>
+      <property name="Sheetfile" value="olfactory_display.kicad_sch"/>
+      <property name="ki_description" value="Socket for Arduino Nano RP2040 Connect"/>
+      <property name="ki_keywords" value="Arduino MPU Shield"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamps>06c5a83d-c186-4699-bff6-212edd940894</tstamps>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="74xx" part="74LS151">
+      <description>Multiplexer 8 to 1</description>
+      <docs>http://www.ti.com/lit/gpn/sn74LS151</docs>
+      <footprints>
+        <fp>DIP?16*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">74LS151</field>
+        <field name="Datasheet">http://www.ti.com/lit/gpn/sn74LS151</field>
+      </fields>
+      <pins>
+        <pin num="1" name="I3" type="input"/>
+        <pin num="2" name="I2" type="input"/>
+        <pin num="3" name="I1" type="input"/>
+        <pin num="4" name="I0" type="input"/>
+        <pin num="5" name="Z" type="output"/>
+        <pin num="6" name="~{Z}" type="output"/>
+        <pin num="7" name="~{E}" type="input"/>
+        <pin num="8" name="GND" type="power_in"/>
+        <pin num="9" name="S2" type="input"/>
+        <pin num="10" name="S1" type="input"/>
+        <pin num="11" name="S0" type="input"/>
+        <pin num="12" name="I7" type="input"/>
+        <pin num="13" name="I6" type="input"/>
+        <pin num="14" name="I5" type="input"/>
+        <pin num="15" name="I4" type="input"/>
+        <pin num="16" name="VCC" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x02">
+      <description>Generic connector, single row, 01x02, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x02</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_01x04">
+      <description>Generic connector, single row, 01x04, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x04</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Connector_Generic" part="Conn_02x04_Odd_Even">
+      <description>Generic connector, double row, 02x04, odd/even pin numbering scheme (row 1 odd numbers, row 2 even numbers), script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_2x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_02x04_Odd_Even</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+        <pin num="6" name="Pin_6" type="passive"/>
+        <pin num="7" name="Pin_7" type="passive"/>
+        <pin num="8" name="Pin_8" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Motor" part="Fan">
+      <description>Fan</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>PinHeader*P2.54mm*</fp>
+        <fp>TerminalBlock*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">M</field>
+        <field name="Value">Fan</field>
+        <field name="Datasheet">~</field>
+      </fields>
+      <pins>
+        <pin num="1" name="+" type="passive"/>
+        <pin num="2" name="-" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="PCM_arduino-library" part="Arduino_Nano_RP2040_Connect_Socket">
+      <description>Socket for Arduino Nano RP2040 Connect</description>
+      <docs>https://docs.arduino.cc/hardware/nano-rp2040-connect</docs>
+      <footprints>
+        <fp>Arduino_Nano_Every_Socket</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">XA1</field>
+        <field name="Value">Arduino_Nano_RP2040_Connect_Socket</field>
+        <field name="Footprint">PCM_arduino-library:Arduino_Nano_Every_Socket</field>
+        <field name="Datasheet">https://docs.arduino.cc/hardware/nano-rp2040-connect</field>
+      </fields>
+      <pins>
+        <pin num="3V3" name="3.3V" type="power_in"/>
+        <pin num="5V" name="5V" type="power_out"/>
+        <pin num="A0" name="A0" type="bidirectional"/>
+        <pin num="A1" name="A1" type="bidirectional"/>
+        <pin num="A2" name="A2" type="bidirectional"/>
+        <pin num="A3" name="A3" type="bidirectional"/>
+        <pin num="A4" name="A4/SDA" type="bidirectional"/>
+        <pin num="A5" name="A5/SCL" type="bidirectional"/>
+        <pin num="A6" name="A6" type="input"/>
+        <pin num="A7" name="A7" type="input"/>
+        <pin num="AREF" name="AREF" type="no_connect"/>
+        <pin num="D0" name="D0/RX" type="bidirectional"/>
+        <pin num="D1" name="D1/TX" type="bidirectional"/>
+        <pin num="D2" name="D2" type="bidirectional"/>
+        <pin num="D3" name="D3" type="bidirectional"/>
+        <pin num="D4" name="D4" type="bidirectional"/>
+        <pin num="D5" name="D5" type="bidirectional"/>
+        <pin num="D6" name="D6" type="bidirectional"/>
+        <pin num="D7" name="D7" type="bidirectional"/>
+        <pin num="D8" name="D8" type="bidirectional"/>
+        <pin num="D9" name="D9" type="bidirectional"/>
+        <pin num="D10" name="D10" type="bidirectional"/>
+        <pin num="D11" name="D11_MOSI" type="bidirectional"/>
+        <pin num="D12" name="D12_MISO" type="bidirectional"/>
+        <pin num="D13" name="D13_SCK" type="bidirectional"/>
+        <pin num="GND1" name="GND" type="power_in"/>
+        <pin num="GND2" name="GND" type="power_in"/>
+        <pin num="RST1" name="RESET" type="open_collector"/>
+        <pin num="RST2" name="REC" type="bidirectional"/>
+        <pin num="VIN" name="VIN" type="power_in"/>
+      </pins>
+    </libpart>
+    <libpart lib="Relay" part="HE751A0500">
+      <description>Reed Relay 5VDC 500Ohm 0.5A SPST-NO(19.5x9.52x5.5)mm THT Dry</description>
+      <docs>http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</docs>
+      <fields>
+        <field name="Reference">K</field>
+        <field name="Value">HE751A0500</field>
+        <field name="Footprint">HE751A0500</field>
+        <field name="Datasheet">http://www.littelfuse.com/~/media/electronics/datasheets/reed_relays/littelfuse_reed_relays_he700_datasheet.pdf.pdf</field>
+        <field name="Height">5.5</field>
+        <field name="Manufacturer_Name">LITTELFUSE</field>
+        <field name="Manufacturer_Part_Number">HE751A0500</field>
+        <field name="Mouser Part Number">934-HE751A0500</field>
+        <field name="Mouser Price/Stock">https://www.mouser.co.uk/ProductDetail/Littelfuse/HE751A0500?qs=X8LBAgEWIKJ0mfCrCKJVRA%3D%3D</field>
+        <field name="Arrow Part Number">HE751A0500</field>
+        <field name="Arrow Price/Stock">https://www.arrow.com/en/products/he751a0500/littelfuse</field>
+      </fields>
+      <pins>
+        <pin num="2" name="COIL+" type="passive"/>
+        <pin num="6" name="COIL-" type="passive"/>
+        <pin num="8" name="COM" type="passive"/>
+        <pin num="14" name="NO" type="passive"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="74xx">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//74xx.kicad_sym</uri>
+    </library>
+    <library logical="Connector_Generic">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Connector_Generic.kicad_sym</uri>
+    </library>
+    <library logical="Motor">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Motor.kicad_sym</uri>
+    </library>
+    <library logical="PCM_arduino-library">
+      <uri>/Users/selinuygun/Documents/KiCad/7.0/3rdparty/symbols/com_github_alarm-siren_arduino-kicad-library/arduino-library.kicad_sym</uri>
+    </library>
+    <library logical="Relay">
+      <uri>/Applications/KiCad/KiCad.app/Contents/SharedSupport/symbols//Relay.kicad_sym</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="Net-(J1-Pin_1)">
+      <node ref="J1" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J1" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J2" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J2" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J3" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J3" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J4" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J4" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J5" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J5" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J6" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J6" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J7" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="J8" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K1" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="K2" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="K3" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="K4" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="K5" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="K6" pin="6" pinfunction="COIL-" pintype="passive"/>
+      <node ref="M1" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="M2" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="M3" pin="2" pinfunction="-" pintype="passive"/>
+      <node ref="U1" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U2" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="U3" pin="8" pinfunction="GND" pintype="power_in"/>
+      <node ref="XA1" pin="GND1" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="2" name="Net-(J1-Pin_2)">
+      <node ref="J1" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K6" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="3" name="Net-(J1-Pin_3)">
+      <node ref="J1" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J2" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J3" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J4" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J5" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J6" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J7" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="U1" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U2" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="U3" pin="16" pinfunction="VCC" pintype="power_in"/>
+      <node ref="XA1" pin="5V" pinfunction="5V" pintype="power_out"/>
+    </net>
+    <net code="4" name="Net-(J1-Pin_4)">
+      <node ref="J1" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="4" pinfunction="I0" pintype="input"/>
+    </net>
+    <net code="5" name="Net-(J1-Pin_6)">
+      <node ref="J1" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="3" pinfunction="I1" pintype="input"/>
+    </net>
+    <net code="6" name="Net-(J1-Pin_8)">
+      <node ref="J1" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U1" pin="2" pinfunction="I2" pintype="input"/>
+    </net>
+    <net code="7" name="Net-(J2-Pin_2)">
+      <node ref="J2" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K5" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="8" name="Net-(J2-Pin_4)">
+      <node ref="J2" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="1" pinfunction="I3" pintype="input"/>
+    </net>
+    <net code="9" name="Net-(J2-Pin_6)">
+      <node ref="J2" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="15" pinfunction="I4" pintype="input"/>
+    </net>
+    <net code="10" name="Net-(J2-Pin_8)">
+      <node ref="J2" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U1" pin="14" pinfunction="I5" pintype="input"/>
+    </net>
+    <net code="11" name="Net-(J3-Pin_2)">
+      <node ref="J3" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K4" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="12" name="Net-(J3-Pin_4)">
+      <node ref="J3" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U1" pin="13" pinfunction="I6" pintype="input"/>
+    </net>
+    <net code="13" name="Net-(J3-Pin_6)">
+      <node ref="J3" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U1" pin="12" pinfunction="I7" pintype="input"/>
+    </net>
+    <net code="14" name="Net-(J3-Pin_8)">
+      <node ref="J3" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U2" pin="4" pinfunction="I0" pintype="input"/>
+    </net>
+    <net code="15" name="Net-(J4-Pin_2)">
+      <node ref="J4" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K3" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="16" name="Net-(J4-Pin_4)">
+      <node ref="J4" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U2" pin="3" pinfunction="I1" pintype="input"/>
+    </net>
+    <net code="17" name="Net-(J4-Pin_6)">
+      <node ref="J4" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U2" pin="2" pinfunction="I2" pintype="input"/>
+    </net>
+    <net code="18" name="Net-(J4-Pin_8)">
+      <node ref="J4" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U2" pin="1" pinfunction="I3" pintype="input"/>
+    </net>
+    <net code="19" name="Net-(J5-Pin_2)">
+      <node ref="J5" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K2" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="20" name="Net-(J5-Pin_4)">
+      <node ref="J5" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U2" pin="15" pinfunction="I4" pintype="input"/>
+    </net>
+    <net code="21" name="Net-(J5-Pin_6)">
+      <node ref="J5" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U2" pin="14" pinfunction="I5" pintype="input"/>
+    </net>
+    <net code="22" name="Net-(J5-Pin_8)">
+      <node ref="J5" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U2" pin="13" pinfunction="I6" pintype="input"/>
+    </net>
+    <net code="23" name="Net-(J6-Pin_2)">
+      <node ref="J6" pin="2" pinfunction="Pin_2" pintype="passive"/>
+      <node ref="K1" pin="14" pinfunction="NO" pintype="passive"/>
+    </net>
+    <net code="24" name="Net-(J6-Pin_4)">
+      <node ref="J6" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="U2" pin="12" pinfunction="I7" pintype="input"/>
+    </net>
+    <net code="25" name="Net-(J6-Pin_6)">
+      <node ref="J6" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="U3" pin="4" pinfunction="I0" pintype="input"/>
+    </net>
+    <net code="26" name="Net-(J6-Pin_8)">
+      <node ref="J6" pin="8" pinfunction="Pin_8" pintype="passive"/>
+      <node ref="U3" pin="3" pinfunction="I1" pintype="input"/>
+    </net>
+    <net code="27" name="Net-(J7-Pin_4)">
+      <node ref="J7" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="XA1" pin="D1" pinfunction="D1/TX" pintype="bidirectional"/>
+    </net>
+    <net code="28" name="Net-(J8-Pin_1)">
+      <node ref="J8" pin="1" pinfunction="Pin_1" pintype="passive"/>
+      <node ref="K1" pin="8" pinfunction="COM" pintype="passive"/>
+      <node ref="K2" pin="8" pinfunction="COM" pintype="passive"/>
+      <node ref="K3" pin="8" pinfunction="COM" pintype="passive"/>
+      <node ref="K4" pin="8" pinfunction="COM" pintype="passive"/>
+      <node ref="K5" pin="8" pinfunction="COM" pintype="passive"/>
+      <node ref="K6" pin="8" pinfunction="COM" pintype="passive"/>
+    </net>
+    <net code="29" name="Net-(J9-Pin_3)">
+      <node ref="J9" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J9" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J9" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J9" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="30" name="Net-(J10-Pin_3)">
+      <node ref="J10" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J10" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="31" name="Net-(J10-Pin_5)">
+      <node ref="J10" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J10" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J10" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="32" name="Net-(J11-Pin_3)">
+      <node ref="J11" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J11" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J11" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="33" name="Net-(J11-Pin_4)">
+      <node ref="J11" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J11" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="34" name="Net-(J12-Pin_3)">
+      <node ref="J12" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J12" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J12" pin="5" pinfunction="Pin_5" pintype="passive"/>
+    </net>
+    <net code="35" name="Net-(J12-Pin_6)">
+      <node ref="J12" pin="6" pinfunction="Pin_6" pintype="passive"/>
+      <node ref="J12" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="36" name="Net-(J13-Pin_3)">
+      <node ref="J13" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J13" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J13" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="37" name="Net-(J13-Pin_4)">
+      <node ref="J13" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J13" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="38" name="Net-(J14-Pin_3)">
+      <node ref="J14" pin="3" pinfunction="Pin_3" pintype="passive"/>
+      <node ref="J14" pin="4" pinfunction="Pin_4" pintype="passive"/>
+      <node ref="J14" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="39" name="Net-(J14-Pin_5)">
+      <node ref="J14" pin="5" pinfunction="Pin_5" pintype="passive"/>
+      <node ref="J14" pin="6" pinfunction="Pin_6" pintype="passive"/>
+    </net>
+    <net code="40" name="Net-(K1-COIL+)">
+      <node ref="K1" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D7" pinfunction="D7" pintype="bidirectional"/>
+    </net>
+    <net code="41" name="Net-(K2-COIL+)">
+      <node ref="K2" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D6" pinfunction="D6" pintype="bidirectional"/>
+    </net>
+    <net code="42" name="Net-(K3-COIL+)">
+      <node ref="K3" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D5" pinfunction="D5" pintype="bidirectional"/>
+    </net>
+    <net code="43" name="Net-(K4-COIL+)">
+      <node ref="K4" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D4" pinfunction="D4" pintype="bidirectional"/>
+    </net>
+    <net code="44" name="Net-(K5-COIL+)">
+      <node ref="K5" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D3" pinfunction="D3" pintype="bidirectional"/>
+    </net>
+    <net code="45" name="Net-(K6-COIL+)">
+      <node ref="K6" pin="2" pinfunction="COIL+" pintype="passive"/>
+      <node ref="XA1" pin="D2" pinfunction="D2" pintype="bidirectional"/>
+    </net>
+    <net code="46" name="Net-(M1-+)">
+      <node ref="M1" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="XA1" pin="A7" pinfunction="A7" pintype="input"/>
+    </net>
+    <net code="47" name="Net-(M2-+)">
+      <node ref="M2" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="XA1" pin="A6" pinfunction="A6" pintype="input"/>
+    </net>
+    <net code="48" name="Net-(M3-+)">
+      <node ref="M3" pin="1" pinfunction="+" pintype="passive"/>
+      <node ref="XA1" pin="A5" pinfunction="A5/SCL" pintype="bidirectional"/>
+    </net>
+    <net code="49" name="Net-(U1-S0)">
+      <node ref="U1" pin="11" pinfunction="S0" pintype="input"/>
+      <node ref="U2" pin="11" pinfunction="S0" pintype="input"/>
+      <node ref="U3" pin="11" pinfunction="S0" pintype="input"/>
+      <node ref="XA1" pin="D11" pinfunction="D11_MOSI" pintype="bidirectional"/>
+    </net>
+    <net code="50" name="Net-(U1-S1)">
+      <node ref="U1" pin="10" pinfunction="S1" pintype="input"/>
+      <node ref="U2" pin="10" pinfunction="S1" pintype="input"/>
+      <node ref="U3" pin="10" pinfunction="S1" pintype="input"/>
+      <node ref="XA1" pin="D12" pinfunction="D12_MISO" pintype="bidirectional"/>
+    </net>
+    <net code="51" name="Net-(U1-S2)">
+      <node ref="U1" pin="9" pinfunction="S2" pintype="input"/>
+      <node ref="U2" pin="9" pinfunction="S2" pintype="input"/>
+      <node ref="U3" pin="9" pinfunction="S2" pintype="input"/>
+      <node ref="XA1" pin="D13" pinfunction="D13_SCK" pintype="bidirectional"/>
+    </net>
+    <net code="52" name="Net-(U1-Z)">
+      <node ref="U1" pin="5" pinfunction="Z" pintype="output"/>
+      <node ref="XA1" pin="D8" pinfunction="D8" pintype="bidirectional"/>
+    </net>
+    <net code="53" name="Net-(U1-~{E})">
+      <node ref="U1" pin="7" pinfunction="~{E}" pintype="input"/>
+      <node ref="U2" pin="7" pinfunction="~{E}" pintype="input"/>
+      <node ref="U3" pin="7" pinfunction="~{E}" pintype="input"/>
+      <node ref="XA1" pin="D0" pinfunction="D0/RX" pintype="bidirectional"/>
+    </net>
+    <net code="54" name="Net-(U2-Z)">
+      <node ref="U2" pin="5" pinfunction="Z" pintype="output"/>
+      <node ref="XA1" pin="D9" pinfunction="D9" pintype="bidirectional"/>
+    </net>
+    <net code="55" name="Net-(U3-Z)">
+      <node ref="U3" pin="5" pinfunction="Z" pintype="output"/>
+      <node ref="XA1" pin="D10" pinfunction="D10" pintype="bidirectional"/>
+    </net>
+    <net code="56" name="unconnected-(J1-Pin_7-Pad7)">
+      <node ref="J1" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="57" name="unconnected-(J2-Pin_7-Pad7)">
+      <node ref="J2" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="58" name="unconnected-(J3-Pin_7-Pad7)">
+      <node ref="J3" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="59" name="unconnected-(J4-Pin_7-Pad7)">
+      <node ref="J4" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="60" name="unconnected-(J5-Pin_7-Pad7)">
+      <node ref="J5" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="61" name="unconnected-(J6-Pin_7-Pad7)">
+      <node ref="J6" pin="7" pinfunction="Pin_7" pintype="passive"/>
+    </net>
+    <net code="62" name="unconnected-(J7-Pin_3-Pad3)">
+      <node ref="J7" pin="3" pinfunction="Pin_3" pintype="passive"/>
+    </net>
+    <net code="63" name="unconnected-(J9-Pin_1-Pad1)">
+      <node ref="J9" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="64" name="unconnected-(J9-Pin_2-Pad2)">
+      <node ref="J9" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="65" name="unconnected-(J9-Pin_4-Pad4)">
+      <node ref="J9" pin="4" pinfunction="Pin_4" pintype="passive"/>
+    </net>
+    <net code="66" name="unconnected-(J9-Pin_8-Pad8)">
+      <node ref="J9" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="67" name="unconnected-(J10-Pin_1-Pad1)">
+      <node ref="J10" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="68" name="unconnected-(J10-Pin_2-Pad2)">
+      <node ref="J10" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="69" name="unconnected-(J10-Pin_8-Pad8)">
+      <node ref="J10" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="70" name="unconnected-(J11-Pin_1-Pad1)">
+      <node ref="J11" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="71" name="unconnected-(J11-Pin_2-Pad2)">
+      <node ref="J11" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="72" name="unconnected-(J11-Pin_8-Pad8)">
+      <node ref="J11" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="73" name="unconnected-(J12-Pin_1-Pad1)">
+      <node ref="J12" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="74" name="unconnected-(J12-Pin_2-Pad2)">
+      <node ref="J12" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="75" name="unconnected-(J12-Pin_8-Pad8)">
+      <node ref="J12" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="76" name="unconnected-(J13-Pin_1-Pad1)">
+      <node ref="J13" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="77" name="unconnected-(J13-Pin_2-Pad2)">
+      <node ref="J13" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="78" name="unconnected-(J13-Pin_8-Pad8)">
+      <node ref="J13" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="79" name="unconnected-(J14-Pin_1-Pad1)">
+      <node ref="J14" pin="1" pinfunction="Pin_1" pintype="passive"/>
+    </net>
+    <net code="80" name="unconnected-(J14-Pin_2-Pad2)">
+      <node ref="J14" pin="2" pinfunction="Pin_2" pintype="passive"/>
+    </net>
+    <net code="81" name="unconnected-(J14-Pin_8-Pad8)">
+      <node ref="J14" pin="8" pinfunction="Pin_8" pintype="passive"/>
+    </net>
+    <net code="82" name="unconnected-(U1-~{Z}-Pad6)">
+      <node ref="U1" pin="6" pinfunction="~{Z}" pintype="output"/>
+    </net>
+    <net code="83" name="unconnected-(U2-~{Z}-Pad6)">
+      <node ref="U2" pin="6" pinfunction="~{Z}" pintype="output"/>
+    </net>
+    <net code="84" name="unconnected-(U3-I2-Pad2)">
+      <node ref="U3" pin="2" pinfunction="I2" pintype="input"/>
+    </net>
+    <net code="85" name="unconnected-(U3-I3-Pad1)">
+      <node ref="U3" pin="1" pinfunction="I3" pintype="input"/>
+    </net>
+    <net code="86" name="unconnected-(U3-I4-Pad15)">
+      <node ref="U3" pin="15" pinfunction="I4" pintype="input"/>
+    </net>
+    <net code="87" name="unconnected-(U3-I5-Pad14)">
+      <node ref="U3" pin="14" pinfunction="I5" pintype="input"/>
+    </net>
+    <net code="88" name="unconnected-(U3-I6-Pad13)">
+      <node ref="U3" pin="13" pinfunction="I6" pintype="input"/>
+    </net>
+    <net code="89" name="unconnected-(U3-I7-Pad12)">
+      <node ref="U3" pin="12" pinfunction="I7" pintype="input"/>
+    </net>
+    <net code="90" name="unconnected-(U3-~{Z}-Pad6)">
+      <node ref="U3" pin="6" pinfunction="~{Z}" pintype="output"/>
+    </net>
+    <net code="91" name="unconnected-(XA1-3.3V-Pad3V3)">
+      <node ref="XA1" pin="3V3" pinfunction="3.3V" pintype="power_in"/>
+    </net>
+    <net code="92" name="unconnected-(XA1-A4{slash}SDA-PadA4)">
+      <node ref="XA1" pin="A4" pinfunction="A4/SDA" pintype="bidirectional"/>
+    </net>
+    <net code="93" name="unconnected-(XA1-GND-PadGND2)">
+      <node ref="XA1" pin="GND2" pinfunction="GND" pintype="power_in"/>
+    </net>
+    <net code="94" name="unconnected-(XA1-PadA0)">
+      <node ref="XA1" pin="A0" pinfunction="A0" pintype="bidirectional"/>
+    </net>
+    <net code="95" name="unconnected-(XA1-PadA1)">
+      <node ref="XA1" pin="A1" pinfunction="A1" pintype="bidirectional"/>
+    </net>
+    <net code="96" name="unconnected-(XA1-PadA2)">
+      <node ref="XA1" pin="A2" pinfunction="A2" pintype="bidirectional"/>
+    </net>
+    <net code="97" name="unconnected-(XA1-PadA3)">
+      <node ref="XA1" pin="A3" pinfunction="A3" pintype="bidirectional"/>
+    </net>
+    <net code="98" name="unconnected-(XA1-PadAREF)">
+      <node ref="XA1" pin="AREF" pinfunction="AREF" pintype="no_connect"/>
+    </net>
+    <net code="99" name="unconnected-(XA1-PadVIN)">
+      <node ref="XA1" pin="VIN" pinfunction="VIN" pintype="power_in"/>
+    </net>
+    <net code="100" name="unconnected-(XA1-REC-PadRST2)">
+      <node ref="XA1" pin="RST2" pinfunction="REC" pintype="bidirectional"/>
+    </net>
+    <net code="101" name="unconnected-(XA1-RESET-PadRST1)">
+      <node ref="XA1" pin="RST1" pinfunction="RESET" pintype="open_collector"/>
+    </net>
+  </nets>
+</export>
