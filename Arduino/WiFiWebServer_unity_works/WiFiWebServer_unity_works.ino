@@ -1,5 +1,12 @@
 #include <WiFiNINA.h>
 #define fan 14
+#define A 11
+#define B 12
+#define C 13
+#define Y1 8
+#define Y2 9
+#define Y3 10
+#define atom 18
 
 char ssid[] = "Selin";
 char pass[] = "selinuygun";
@@ -37,7 +44,16 @@ void setup() {
   pinMode(7,OUTPUT);
   pinMode(8,OUTPUT);
   pinMode(9,OUTPUT);
+  pinMode(atom,OUTPUT);
   pinMode(fan, OUTPUT);
+  pinMode(A, OUTPUT);
+  pinMode(B, OUTPUT);
+  pinMode(C, OUTPUT);
+  pinMode(Y1, INPUT);
+  pinMode(Y2, INPUT);
+  pinMode(Y3, INPUT);
+  pinMode(17, OUTPUT);
+  digitalWrite(17, LOW);
 }
 
 void loop() {
@@ -49,16 +65,54 @@ void loop() {
         // Serial.write(c);
         if(c == 'l'){
             delay(100);
-            char binary[] = "000001010011100101";
+            unsigned long binary = 0;
+            char binarymessage[18];
 
-            byte message[sizeof(binary)];
+            for (int add = 0; add <= 7; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
+            
+              binary = (binary << 1) | digitalRead(Y1);
+              delay(1);
+            }
+          
+            for (int add = 0; add <= 7; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
+              
+            
+              binary = (binary << 1) | digitalRead(Y2);
+              delay(1);
+              
+            }
+          
+            for (int add = 0; add <= 1; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
+              
+            
+              binary = (binary << 1) | digitalRead(Y3);
+              delay(1);
+              
+            }
 
-            for (int i = 0; i < sizeof(binary); i++) {
-              message[i] = binary[i];
+            for (int i = 17; i >= 0; i--) {
+              binarymessage[17 - i] = ((binary >> i) & 0x01) + '0';
+            }
+            
+//            char binary[] = "000001010011100101";
+
+            byte message[sizeof(binarymessage)];
+
+            for (int i = 0; i < sizeof(binarymessage); i++) {
+              message[i] = binarymessage[i];
             }
 
             client.write(message, sizeof(message));
-            // Serial.write(message, sizeof(message));
+//            Serial.write(message, sizeof(message));
 
             scent_code = true;
             delay(100);
@@ -115,6 +169,9 @@ void loop() {
 //                    Serial.print(pin);
 //                    Serial.print(" set to ");
 //                    Serial.println(1);
+                    if (c >= '2' && c <= '7'){
+                      digitalWrite(atom, 1);
+                    }
                     digitalWrite(pin, 1);
                     prev_c = pin;
                     break;
@@ -123,6 +180,9 @@ void loop() {
 //                    Serial.print(pin);
 //                    Serial.print(" set to ");
 //                    Serial.println(0);
+                    if (c >= '2' && c <= '7'){
+                      digitalWrite(atom, 0);
+                    }
                     digitalWrite(pin, 0);
                     prev_c = pin;
                     break;

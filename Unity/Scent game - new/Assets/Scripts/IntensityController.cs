@@ -48,8 +48,8 @@ public class IntensityController : MonoBehaviour
 
     void Start()
     {
-        scentPins = new int[9];
-        ScentDutyCycle = new float[5];
+        scentPins = new int[6];
+        ScentDutyCycle = new float[10];
 
         scentPins[0] = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
         scentPins[1] = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
@@ -155,12 +155,17 @@ public class IntensityController : MonoBehaviour
             yield return null;
             if (detectedButtonPressed)
             {
+                detectedButton.SetActive(false);
                 scentPWMactive = false;
                 StopCoroutine(scentPWMCoroutine);
                 message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{elapsedTime}";
                 arduinoComm.SendMessageToArduino(message);
                 Numbers.SetActive(true);
                 yield return new WaitUntil(() => numberButtonPressed);
+                message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{numberValue}";
+                arduinoComm.SendMessageToArduino(message);
+                Numbers.SetActive(false);
+                numberButtonPressed = false;
                 break;
             }
         }
@@ -169,9 +174,8 @@ public class IntensityController : MonoBehaviour
         {
             message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{0}";
             arduinoComm.SendMessageToArduino(message);
+            detectedButton.SetActive(false);
         }
-
-        detectedButton.SetActive(false);
 
         if (scentPWMactive)
         {
@@ -200,7 +204,7 @@ public class IntensityController : MonoBehaviour
 
         nextButton.SetActive(true);
 
-        if (IntensityCount == 5)
+        if (IntensityCount == 10)
         {
             nextButtonText.text = "Next Scent";
         }
@@ -215,8 +219,12 @@ public class IntensityController : MonoBehaviour
     public void NumberButtonPressed()
     {
         numberButtonPressed = true;
-        numberButtonText = GetComponentInChildren<TMP_Text>();
-        numberValue = numberButtonText.text;
-        Debug.Log("Button Text: " + numberValue);
+        Button button = UnityEngine.EventSystems.EventSystem.current.currentSelectedGameObject.GetComponent<Button>();
+        if (button != null)
+        {
+            numberValue = button.GetComponentInChildren<TMP_Text>().text;
+            Debug.Log("Button Text: " + numberValue);
+        }
     }
+
 }
