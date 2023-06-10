@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class scentButtonController : MonoBehaviour
 {
     public Arduinocommunication arduinoComm;
+    public ScentTrigger scentTrig;
     public PanelController PanelCont;
 
     public Button Rose;
@@ -14,6 +15,8 @@ public class scentButtonController : MonoBehaviour
     public Button Jasmine;
     public Button Orange;
     public Button Honeysuckle;
+
+    private Coroutine BackgroundScentCoroutine;
 
     private int RoseIndex = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
     private int LavenderIndex = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
@@ -26,8 +29,6 @@ public class scentButtonController : MonoBehaviour
     {
         PanelController.scentButtonPressed = true;
     }
-
-
 
     public void RoseButtonPressed()
     {
@@ -62,6 +63,18 @@ public class scentButtonController : MonoBehaviour
     public void HoneysuckleButtonPressed()
     {
         string message = $"{0}{PanelCont.activeScent}{HoneysuckleIndex}";
+        arduinoComm.SendMessageToArduino(message);
+    }
+
+    public void BackgroundScentOn()
+    {
+        BackgroundScentCoroutine = StartCoroutine(scentTrig.SendPwmMessageCoroutine(7, 0.1f, true));
+    }
+
+    public void BackgroundScentOff()
+    {
+        StopCoroutine(BackgroundScentCoroutine);
+        string message = "7o";
         arduinoComm.SendMessageToArduino(message);
     }
 }

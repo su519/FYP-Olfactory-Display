@@ -54,6 +54,7 @@ void setup() {
   pinMode(Y3, INPUT);
   pinMode(17, OUTPUT);
   digitalWrite(17, LOW);
+  
 }
 
 void loop() {
@@ -61,6 +62,7 @@ void loop() {
   if(client){
     while (client.connected()) {
       if (client.available()) {
+        digitalWrite(atom, LOW);
         char c = client.read();
         // Serial.write(c);
         if(c == 'l'){
@@ -133,11 +135,11 @@ void loop() {
             // char c = client.read();
             if (c >= '1' && c <= '9') {
               int pin = c - '0'; // convert the character to an integer
-//              Serial.print("prev_c: ");
-//              Serial.println(prev_c);
-//              Serial.print("pin: ");
-//              Serial.println(pin);
-//              Serial.print(c);
+              Serial.print("prev_c: ");
+              Serial.println(prev_c);
+              Serial.print("pin: ");
+              Serial.println(pin);
+              Serial.print(c);
               if (client.available()) {
                 c1 = client.read();
 //                Serial.println(c1);
@@ -149,26 +151,26 @@ void loop() {
                       str_pin[1] = c1; 
                       pin = atoi(str_pin);
                       if(c2 == 'i'){
-//                        Serial.print("Pin ");
-//                        Serial.print(pin);
-//                        Serial.print(" set to ");
-//                        Serial.println(1);
+                        Serial.print("Pin ");
+                        Serial.print(pin);
+                        Serial.print(" set to ");
+                        Serial.println(1);
                         digitalWrite(pin, 1);
                         break;
                       }else if(c2 == 'o'){
-//                        Serial.print("Pin ");
-//                        Serial.print(pin);
-//                        Serial.print(" set to ");
-//                        Serial.println(0);
+                        Serial.print("Pin ");
+                        Serial.print(pin);
+                        Serial.print(" set to ");
+                        Serial.println(0);
                         digitalWrite(pin, 0);
                         break;
                       }
                     }
                   }else if (c1 == 'i'){
-//                    Serial.print("Pin ");
-//                    Serial.print(pin);
-//                    Serial.print(" set to ");
-//                    Serial.println(1);
+                    Serial.print("Pin ");
+                    Serial.print(pin);
+                    Serial.print(" set to ");
+                    Serial.println(1);
                     if (c >= '2' && c <= '7'){
                       digitalWrite(atom, 1);
                     }
@@ -176,10 +178,10 @@ void loop() {
                     prev_c = pin;
                     break;
                   }else if(c1 == 'o'){
-//                    Serial.print("Pin ");
-//                    Serial.print(pin);
-//                    Serial.print(" set to ");
-//                    Serial.println(0);
+                    Serial.print("Pin ");
+                    Serial.print(pin);
+                    Serial.print(" set to ");
+                    Serial.println(0);
                     if (c >= '2' && c <= '7'){
                       digitalWrite(atom, 0);
                     }
