@@ -22,10 +22,10 @@ public class ScentTrigger : MonoBehaviour
     private int yellowIndex;
     private int blueIndex;
 
-
+    int fan = 14;
     string on = "i";
     string off = "o";
-    private float dutyCycle = 0.5f;
+    public float dutyCycle;
     private float frequency = 1.0f;
 
     private Coroutine pinkCoroutine;
@@ -37,6 +37,7 @@ public class ScentTrigger : MonoBehaviour
 
     //111 101 111 100 010 000
 
+    private Coroutine fanCoroutine;
 
     private void Start()
     {
@@ -52,6 +53,39 @@ public class ScentTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        Debug.Log(dutyCycle);
+        if(dutyCycle == 0.5f)
+        {
+            if (pinkInside == true)
+            {
+                StopCoroutine(pinkCoroutine);
+            }
+
+            if(lilacInside == true)
+            {
+                StopCoroutine(lilacCoroutine);
+            }
+
+            if (orangeInside == true)
+            {
+                StopCoroutine(orangeCoroutine);
+            }
+
+            if (purpleInside == true)
+            {
+                StopCoroutine(purpleCoroutine);
+            }
+
+            if (yellowInside == true)
+            {
+                StopCoroutine(yellowCoroutine);
+            }
+
+            if (blueInside == true)
+            {
+                StopCoroutine(blueCoroutine);
+            }
+        }
         if (other.name == "pink" && !pinkInside)
         {
 
@@ -128,6 +162,22 @@ public class ScentTrigger : MonoBehaviour
         }
     }
 
+    public IEnumerator FanCoroutine()
+    {
+        string message = $"{fan}{on}";
+        arduinoComm.SendMessageToArduino(message);
+        yield return new WaitForSeconds(5);
+        message = $"{fan}{off}";
+        arduinoComm.SendMessageToArduino(message);
+        StopFanCoroutine();
+
+    }
+
+    public void StopFanCoroutine()
+    {
+            StopCoroutine(fanCoroutine);
+
+    }
 
 
     private void OnTriggerExit(Collider other)
@@ -193,6 +243,7 @@ public class ScentTrigger : MonoBehaviour
             string message = $"{blueIndex}{off}";
             arduinoComm.SendMessageToArduino(message);
         }
+        fanCoroutine = StartCoroutine(FanCoroutine());
     }
 
 }

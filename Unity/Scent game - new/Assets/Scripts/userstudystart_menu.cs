@@ -27,4 +27,10 @@ public class userstudystart_menu : MonoBehaviour
     {
         SceneManager.LoadScene("3 Environment and Object Identification");
     }
+
+    public void switchToBackgroundIdentification()
+    {
+        SceneManager.LoadScene("4 Background Scent Identification");
+    }
+
 }

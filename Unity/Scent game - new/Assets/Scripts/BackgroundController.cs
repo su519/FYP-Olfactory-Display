@@ -68,7 +68,7 @@ public class BackgroundController : MonoBehaviour
         BackgroundDutyCycle[3] = 0.5f;
         BackgroundDutyCycle[4] = 0.3f;
 
-        backgroundPin = 9;
+        backgroundPin = 6;
 
         nextButton.SetActive(false);
         intensityButton.SetActive(false);

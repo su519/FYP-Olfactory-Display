@@ -15,7 +15,7 @@ sceneSetups:
   isLoaded: 0
   isActive: 0
   isSubScene: 0
-- path: Assets/Scenes/3 Environment and Object Identification.unity
+- path: Assets/Scenes/4 Background Scent Identification.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0

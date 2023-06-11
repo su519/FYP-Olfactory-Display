@@ -391,6 +391,7 @@
 "Assets/Scripts/6 Teleportation/TeleportationController.cs"
 "Assets/Scripts/Arduinocommunication.cs"
 "Assets/Scripts/BackgroundController.cs"
+"Assets/Scripts/BackgroundIdentificationController.cs"
 "Assets/Scripts/BluetoothLEController.cs"
 "Assets/Scripts/ButtonController.cs"
 "Assets/Scripts/IntensityController.cs"

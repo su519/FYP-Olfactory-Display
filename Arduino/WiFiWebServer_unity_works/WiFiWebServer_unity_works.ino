@@ -67,45 +67,45 @@ void loop() {
         // Serial.write(c);
         if(c == 'l'){
             delay(100);
-            unsigned long binary = 0;
-            char binarymessage[18];
-
-            for (int add = 0; add <= 7; add = add + 1) {
-              digitalWrite(A, (add & 0b001) >> 0);
-              digitalWrite(B, (add & 0b010) >> 1);
-              digitalWrite(C, (add & 0b100) >> 2);
+//            unsigned long binary = 0;
+//            char binarymessage[18];
+//
+//            for (int add = 0; add <= 7; add = add + 1) {
+//              digitalWrite(A, (add & 0b001) >> 0);
+//              digitalWrite(B, (add & 0b010) >> 1);
+//              digitalWrite(C, (add & 0b100) >> 2);
+//            
+//              binary = (binary << 1) | digitalRead(Y1);
+//              delay(1);
+//            }
+//          
+//            for (int add = 0; add <= 7; add = add + 1) {
+//              digitalWrite(A, (add & 0b001) >> 0);
+//              digitalWrite(B, (add & 0b010) >> 1);
+//              digitalWrite(C, (add & 0b100) >> 2);
+//              
+//            
+//              binary = (binary << 1) | digitalRead(Y2);
+//              delay(1);
+//              
+//            }
+//          
+//            for (int add = 0; add <= 1; add = add + 1) {
+//              digitalWrite(A, (add & 0b001) >> 0);
+//              digitalWrite(B, (add & 0b010) >> 1);
+//              digitalWrite(C, (add & 0b100) >> 2);
+//              
+//            
+//              binary = (binary << 1) | digitalRead(Y3);
+//              delay(1);
+//              
+//            }
+//
+//            for (int i = 17; i >= 0; i--) {
+//              binarymessage[17 - i] = ((binary >> i) & 0x01) + '0';
+//            }
             
-              binary = (binary << 1) | digitalRead(Y1);
-              delay(1);
-            }
-          
-            for (int add = 0; add <= 7; add = add + 1) {
-              digitalWrite(A, (add & 0b001) >> 0);
-              digitalWrite(B, (add & 0b010) >> 1);
-              digitalWrite(C, (add & 0b100) >> 2);
-              
-            
-              binary = (binary << 1) | digitalRead(Y2);
-              delay(1);
-              
-            }
-          
-            for (int add = 0; add <= 1; add = add + 1) {
-              digitalWrite(A, (add & 0b001) >> 0);
-              digitalWrite(B, (add & 0b010) >> 1);
-              digitalWrite(C, (add & 0b100) >> 2);
-              
-            
-              binary = (binary << 1) | digitalRead(Y3);
-              delay(1);
-              
-            }
-
-            for (int i = 17; i >= 0; i--) {
-              binarymessage[17 - i] = ((binary >> i) & 0x01) + '0';
-            }
-            
-//            char binary[] = "000001010011100101";
+            char binarymessage[] = "000001010011100101";
 
             byte message[sizeof(binarymessage)];
 
