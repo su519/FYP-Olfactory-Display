@@ -22,7 +22,8 @@ public class ScentTrigger : MonoBehaviour
     private int yellowIndex;
     private int blueIndex;
 
-    int fan = 14;
+    public static bool held = false;
+
     string on = "i";
     string off = "o";
     public float dutyCycle;
@@ -37,7 +38,7 @@ public class ScentTrigger : MonoBehaviour
 
     //111 101 111 100 010 000
 
-    private Coroutine fanCoroutine;
+    
 
     private void Start()
     {
@@ -53,8 +54,9 @@ public class ScentTrigger : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
+        held = true;
         Debug.Log(dutyCycle);
-        if(dutyCycle == 0.5f)
+        if(dutyCycle == 0.8f)
         {
             if (pinkInside == true)
             {
@@ -141,6 +143,8 @@ public class ScentTrigger : MonoBehaviour
     {
         float onTime = dutyCycle * (1.0f / frequency);
         float offTime = (1.0f - dutyCycle) * (1.0f / frequency);
+        Debug.Log(onTime);
+        Debug.Log(offTime);
 
         bool isRunning = true;
 
@@ -162,27 +166,15 @@ public class ScentTrigger : MonoBehaviour
         }
     }
 
-    public IEnumerator FanCoroutine()
-    {
-        string message = $"{fan}{on}";
-        arduinoComm.SendMessageToArduino(message);
-        yield return new WaitForSeconds(5);
-        message = $"{fan}{off}";
-        arduinoComm.SendMessageToArduino(message);
-        StopFanCoroutine();
-
-    }
-
-    public void StopFanCoroutine()
-    {
-            StopCoroutine(fanCoroutine);
-
-    }
-
 
     private void OnTriggerExit(Collider other)
     {
-        if (other.name == "pink" && pinkInside)
+        if (dutyCycle == 0.8f)
+        {
+            dutyCycle = 0.3f;
+        }
+
+            if (other.name == "pink" && pinkInside)
         {
             
             Debug.Log("pink Ball exited HMD collider");
@@ -243,7 +235,7 @@ public class ScentTrigger : MonoBehaviour
             string message = $"{blueIndex}{off}";
             arduinoComm.SendMessageToArduino(message);
         }
-        fanCoroutine = StartCoroutine(FanCoroutine());
+        
     }
 
 }

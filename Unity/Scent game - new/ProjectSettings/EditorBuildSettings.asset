@@ -20,6 +20,10 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/4 Background Scent Identification.unity
     guid: ad375c2b9967f4a6f8bab4e06b547a34
+  - enabled: 1
+    path: Assets/Scenes/3 Environment and Object Identification.unity
+    guid: 416e41d3b1cf64d159f644091d59756b
   m_configObjects:
     Unity.XR.Oculus.Settings: {fileID: 11400000, guid: 87bb2a24a03334be68b9bc27cbc448f0, type: 2}
     com.unity.xr.management.loader_settings: {fileID: 11400000, guid: 4773ec2393d0d4586b4ec61f0d67f925, type: 2}
+    xr.sdk.mock-hmd.settings: {fileID: 11400000, guid: 9fc698b0b2bb343ed8f6db998cb62807, type: 2}

@@ -24,7 +24,7 @@ char c2;
 
 void setup() {
   Serial.begin(9600);
-  
+  digitalWrite(atom, LOW);
   while (status != WL_CONNECTED) {
     Serial.print("Attempting to connect to SSID: ");
     Serial.println(ssid);
@@ -67,45 +67,45 @@ void loop() {
         // Serial.write(c);
         if(c == 'l'){
             delay(100);
-//            unsigned long binary = 0;
-//            char binarymessage[18];
-//
-//            for (int add = 0; add <= 7; add = add + 1) {
-//              digitalWrite(A, (add & 0b001) >> 0);
-//              digitalWrite(B, (add & 0b010) >> 1);
-//              digitalWrite(C, (add & 0b100) >> 2);
-//            
-//              binary = (binary << 1) | digitalRead(Y1);
-//              delay(1);
-//            }
-//          
-//            for (int add = 0; add <= 7; add = add + 1) {
-//              digitalWrite(A, (add & 0b001) >> 0);
-//              digitalWrite(B, (add & 0b010) >> 1);
-//              digitalWrite(C, (add & 0b100) >> 2);
-//              
-//            
-//              binary = (binary << 1) | digitalRead(Y2);
-//              delay(1);
-//              
-//            }
-//          
-//            for (int add = 0; add <= 1; add = add + 1) {
-//              digitalWrite(A, (add & 0b001) >> 0);
-//              digitalWrite(B, (add & 0b010) >> 1);
-//              digitalWrite(C, (add & 0b100) >> 2);
-//              
-//            
-//              binary = (binary << 1) | digitalRead(Y3);
-//              delay(1);
-//              
-//            }
-//
-//            for (int i = 17; i >= 0; i--) {
-//              binarymessage[17 - i] = ((binary >> i) & 0x01) + '0';
-//            }
+            unsigned long binary = 0;
+            char binarymessage[18];
+
+            for (int add = 0; add <= 7; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
             
-            char binarymessage[] = "000001010011100101";
+              binary = (binary << 1) | digitalRead(Y1);
+              delay(1);
+            }
+          
+            for (int add = 0; add <= 7; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
+              
+            
+              binary = (binary << 1) | digitalRead(Y2);
+              delay(1);
+              
+            }
+          
+            for (int add = 0; add <= 1; add = add + 1) {
+              digitalWrite(A, (add & 0b001) >> 0);
+              digitalWrite(B, (add & 0b010) >> 1);
+              digitalWrite(C, (add & 0b100) >> 2);
+              
+            
+              binary = (binary << 1) | digitalRead(Y3);
+              delay(1);
+              
+            }
+
+            for (int i = 17; i >= 0; i--) {
+              binarymessage[17 - i] = ((binary >> i) & 0x01) + '0';
+            }
+            
+//            char binarymessage[] = "000001010011100101";
 
             byte message[sizeof(binarymessage)];
 
@@ -135,11 +135,11 @@ void loop() {
             // char c = client.read();
             if (c >= '1' && c <= '9') {
               int pin = c - '0'; // convert the character to an integer
-              Serial.print("prev_c: ");
-              Serial.println(prev_c);
-              Serial.print("pin: ");
-              Serial.println(pin);
-              Serial.print(c);
+//              Serial.print("prev_c: ");
+//              Serial.println(prev_c);
+//              Serial.print("pin: ");
+//              Serial.println(pin);
+//              Serial.print(c);
               if (client.available()) {
                 c1 = client.read();
 //                Serial.println(c1);
@@ -151,26 +151,26 @@ void loop() {
                       str_pin[1] = c1; 
                       pin = atoi(str_pin);
                       if(c2 == 'i'){
-                        Serial.print("Pin ");
-                        Serial.print(pin);
-                        Serial.print(" set to ");
-                        Serial.println(1);
+//                        Serial.print("Pin ");
+//                        Serial.print(pin);
+//                        Serial.print(" set to ");
+//                        Serial.println(1);
                         digitalWrite(pin, 1);
                         break;
                       }else if(c2 == 'o'){
-                        Serial.print("Pin ");
-                        Serial.print(pin);
-                        Serial.print(" set to ");
-                        Serial.println(0);
+//                        Serial.print("Pin ");
+//                        Serial.print(pin);
+//                        Serial.print(" set to ");
+//                        Serial.println(0);
                         digitalWrite(pin, 0);
                         break;
                       }
                     }
                   }else if (c1 == 'i'){
-                    Serial.print("Pin ");
-                    Serial.print(pin);
-                    Serial.print(" set to ");
-                    Serial.println(1);
+//                    Serial.print("Pin ");
+//                    Serial.print(pin);
+//                    Serial.print(" set to ");
+//                    Serial.println(1);
                     if (c >= '2' && c <= '7'){
                       digitalWrite(atom, 1);
                     }
@@ -178,10 +178,10 @@ void loop() {
                     prev_c = pin;
                     break;
                   }else if(c1 == 'o'){
-                    Serial.print("Pin ");
-                    Serial.print(pin);
-                    Serial.print(" set to ");
-                    Serial.println(0);
+//                    Serial.print("Pin ");
+//                    Serial.print(pin);
+//                    Serial.print(" set to ");
+//                    Serial.println(0);
                     if (c >= '2' && c <= '7'){
                       digitalWrite(atom, 0);
                     }

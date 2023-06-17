@@ -315,6 +315,7 @@
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.XR.Interaction.Toolkit.Samples.DeviceSimulator.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.XR.Interaction.Toolkit.Samples.StarterAssets.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.XR.Management.ref.dll"
+-r:"Library/Bee/artifacts/1300b0aP.dag/Unity.XR.MockHMD.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/Unity.XR.Oculus.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.SpatialTracking.ref.dll"
 -r:"Library/Bee/artifacts/1300b0aP.dag/UnityEngine.UI.ref.dll"

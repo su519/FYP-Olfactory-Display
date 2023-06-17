@@ -34,6 +34,7 @@
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PlayerScriptAssemblies/Unity.RenderPipelines.ShaderGraph.ShaderGraphLibrary.dll"
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PlayerScriptAssemblies/Unity.XR.Oculus.dll"
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PlayerScriptAssemblies/Unity.Services.Core.Device.dll"
+-a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PlayerScriptAssemblies/Unity.XR.MockHMD.dll"
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PackageCache/com.unity.nuget.newtonsoft-json@3.0.2/Runtime/AOT/Newtonsoft.Json.dll"
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.Unsafe.dll"
 -a="/Users/selinuygun/Documents/GitHub/FYP-Olfactory-Display/Unity/Scent game - new/Library/PackageCache/com.unity.burst@1.8.2/Unity.Burst.CodeGen/Unity.Burst.Cecil.Mdb.dll"

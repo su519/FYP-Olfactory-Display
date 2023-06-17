@@ -1,8 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/Scent Room.unity
-  isLoaded: 0
-  isActive: 0
-  isSubScene: 0
 - path: Assets/Scenes/Start Screen.unity
   isLoaded: 1
   isActive: 1
@@ -16,6 +12,14 @@ sceneSetups:
   isActive: 0
   isSubScene: 0
 - path: Assets/Scenes/4 Background Scent Identification.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/3 Environment and Object Identification.unity
+  isLoaded: 0
+  isActive: 0
+  isSubScene: 0
+- path: Assets/Scenes/Scent Room.unity
   isLoaded: 0
   isActive: 0
   isSubScene: 0

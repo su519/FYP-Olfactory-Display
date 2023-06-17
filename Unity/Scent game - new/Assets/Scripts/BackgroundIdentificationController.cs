@@ -36,7 +36,7 @@ public class BackgroundIdentificationController : MonoBehaviour
     string on = "i";
     string off = "o";
     int backgroundCount = 0;
-    string fan = "14";
+    string fan = "16";
 
     private float[] DutyCycle;
     private Coroutine scent1PWMCoroutine;
@@ -51,12 +51,12 @@ public class BackgroundIdentificationController : MonoBehaviour
         scentPins = new int[9];
         DutyCycle = new float[9];
 
-        scentPins[0] = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
-        scentPins[1] = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
-        scentPins[2] = Arduinocommunication.binaryCodes.IndexOf("010") + 2;
-        scentPins[3] = Arduinocommunication.binaryCodes.IndexOf("011") + 2;
-        scentPins[4] = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
-        scentPins[5] = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
+        scentPins[0] = 3;
+        scentPins[1] = 5;
+        scentPins[2] = 2;
+        scentPins[3] = 6;
+        scentPins[4] = 4;
+        scentPins[5] = 7;
         scentPins[6] = UnityEngine.Random.Range(2, 7);
         scentPins[7] = UnityEngine.Random.Range(2, 7);
         scentPins[8] = UnityEngine.Random.Range(2, 7);
@@ -136,9 +136,12 @@ public class BackgroundIdentificationController : MonoBehaviour
         arduinoComm.SendMessageToArduino(message);
         yield return new WaitForSeconds(5f);
         scentText.text = "Clearing scent 1";
+
         message = $"{fan}{on}";
         arduinoComm.SendMessageToArduino(message);
         yield return new WaitForSeconds(5f);
+        message = $"{fan}{off}";
+        arduinoComm.SendMessageToArduino(message);
 
         scentText.text = "Releasing scent 2";
         int randomPin1 = Random.Range(0, 8);
@@ -164,7 +167,12 @@ public class BackgroundIdentificationController : MonoBehaviour
         scentText.text = "Clearing scent 2";
         message = $"{fan}{on}";
         arduinoComm.SendMessageToArduino(message);
+        
+
         yield return new WaitForSeconds(5f);
+
+        message = $"{fan}{off}";
+        arduinoComm.SendMessageToArduino(message);
 
         scentText.text = "Releasing together";
 
@@ -195,6 +203,8 @@ public class BackgroundIdentificationController : MonoBehaviour
 
         message = $"{fan}{off}";
         arduinoComm.SendMessageToArduino(message);
+
+        yield return new WaitForSeconds(5f);
 
         scentText.gameObject.SetActive(false);
 

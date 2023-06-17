@@ -10,7 +10,8 @@ public class Arduinocommunication : MonoBehaviour
     private TcpClient client;
     private NetworkStream stream;
 
-    private string arduinoIPAddress = "172.20.10.2";
+    private string arduinoIPAddress = "172.20.10.3";
+
     private int arduinoPort = 80;
     private bool connected = false;
 

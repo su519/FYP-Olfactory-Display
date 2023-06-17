@@ -36,7 +36,7 @@ public class IntensityController : MonoBehaviour
     string on = "i";
     string off = "o";
     int IntensityCount = 0;
-    string fan = "14";
+    string fan = "16";
 
     public int activeScent;
     private float[] ScentDutyCycle;
@@ -49,25 +49,26 @@ public class IntensityController : MonoBehaviour
     void Start()
     {
         scentPins = new int[6];
-        ScentDutyCycle = new float[10];
+        ScentDutyCycle = new float[5];
 
-        scentPins[0] = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
-        scentPins[1] = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
-        scentPins[2] = Arduinocommunication.binaryCodes.IndexOf("010") + 2;
-        scentPins[3] = Arduinocommunication.binaryCodes.IndexOf("011") + 2;
-        scentPins[4] = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
-        scentPins[5] = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
+        scentPins[0] = 2;
+        scentPins[1] = 3;
+        scentPins[2] = 4;
+        scentPins[3] = 5;
+        scentPins[4] = 6;
+        scentPins[5] = 7;
 
-        ScentDutyCycle[0] = 0.1f;
-        ScentDutyCycle[1] = 0.8f;
-        ScentDutyCycle[2] = 0.2f;
-        ScentDutyCycle[3] = 1;
-        ScentDutyCycle[4] = 0.3f;
-        ScentDutyCycle[5] = 0.6f;
-        ScentDutyCycle[6] = 0.7f;
-        ScentDutyCycle[7] = 0.4f;
-        ScentDutyCycle[8] = 0.9f;
-        ScentDutyCycle[9] = 0.5f;
+
+    //    private int GrapeIndex = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
+    //private int PineIndex = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
+    //private int LavenderIndex = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
+    //private int OrangeIndex = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
+
+        ScentDutyCycle[0] = 0.3f;
+        ScentDutyCycle[1] = 0.7f;
+        ScentDutyCycle[2] = 0.5f;
+        ScentDutyCycle[3] = 0.1f;
+        ScentDutyCycle[4] = 0.9f;
 
         Numbers.SetActive(false);
         nextButton.SetActive(false);
@@ -109,7 +110,7 @@ public class IntensityController : MonoBehaviour
         Debug.Log("Current Scent: " + currentScent);
         Debug.Log("Intensity: " + IntensityCount);
 
-        if (currentScent == 6)
+        if (currentScent == 7)
         {
 
             scentText.text = "End of trial";
@@ -119,7 +120,7 @@ public class IntensityController : MonoBehaviour
         else
         {
             Debug.Log("else");
-            if (IntensityCount == 10)
+            if (IntensityCount == 5)
             {
 
                 IntensityCount = 0;
@@ -149,7 +150,7 @@ public class IntensityController : MonoBehaviour
         scentPWMCoroutine = StartCoroutine(scentTrig.SendPwmMessageCoroutine(scentPins[currentScent - 1], ScentDutyCycle[IntensityCount], true));
         scentPWMactive = true;
 
-        while (elapsedTime < 5f)
+        while (elapsedTime < 7f)
         {
             elapsedTime = Time.time - startTime;
             yield return null;
@@ -161,6 +162,7 @@ public class IntensityController : MonoBehaviour
                 message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{elapsedTime}";
                 arduinoComm.SendMessageToArduino(message);
                 Numbers.SetActive(true);
+                scentText.text = "What is the perceived distance of the scent?\n 1: Very close\n 10: Very far";
                 yield return new WaitUntil(() => numberButtonPressed);
                 message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{numberValue}";
                 arduinoComm.SendMessageToArduino(message);
@@ -170,7 +172,7 @@ public class IntensityController : MonoBehaviour
             }
         }
 
-        if (elapsedTime > 5f && !detectedButtonPressed)
+        if (elapsedTime > 7f && !detectedButtonPressed)
         {
             message = $"{0}{0}{scentPins[currentScent - 1]}{ScentDutyCycle[IntensityCount]}{0}";
             arduinoComm.SendMessageToArduino(message);
@@ -197,6 +199,7 @@ public class IntensityController : MonoBehaviour
         message = $"{fan}{off}";
         arduinoComm.SendMessageToArduino(message);
 
+        yield return new WaitForSeconds(5f);
         scentText.gameObject.SetActive(false);
 
         IntensityCount++;

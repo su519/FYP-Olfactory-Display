@@ -4629,6 +4629,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   arduinoComm: {fileID: 1669832381}
+  dutyCycle: 0
 --- !u!114 &2074279262
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4704,9 +4705,7 @@ MonoBehaviour:
   choice: {fileID: 992229793}
   startButton: {fileID: 1682029737}
   nextButton: {fileID: 1859022925}
-  intensityButton: {fileID: 0}
   returnButton: {fileID: 1746924452}
   scentText: {fileID: 204634588}
   backButton: {fileID: 979770473}
   nextButtonText: {fileID: 413902060}
-  activeScent: 0

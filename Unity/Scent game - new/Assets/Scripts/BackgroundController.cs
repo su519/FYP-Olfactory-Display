@@ -35,7 +35,7 @@ public class BackgroundController : MonoBehaviour
     string on = "i";
     string off = "o";
     int backgroundCount = 0;
-    string fan = "14";
+    string fan = "16";
 
     public int activeScent;
     private float ScentDutyCycle = 0.5f;
@@ -52,15 +52,15 @@ public class BackgroundController : MonoBehaviour
         scentPins = new int[9];
         BackgroundDutyCycle = new float[5];
 
-        scentPins[0] = Arduinocommunication.binaryCodes.IndexOf("000") + 2;
-        scentPins[1] = Arduinocommunication.binaryCodes.IndexOf("001") + 2;
-        scentPins[2] = Arduinocommunication.binaryCodes.IndexOf("010") + 2;
-        scentPins[3] = Arduinocommunication.binaryCodes.IndexOf("011") + 2;
-        scentPins[4] = Arduinocommunication.binaryCodes.IndexOf("100") + 2;
-        scentPins[5] = Arduinocommunication.binaryCodes.IndexOf("101") + 2;
-        scentPins[6] = UnityEngine.Random.Range(2, 7);
-        scentPins[7] = UnityEngine.Random.Range(2, 7);
-        scentPins[8] = UnityEngine.Random.Range(2, 7);
+        scentPins[0] = 2;
+        scentPins[1] = 3;
+        scentPins[2] = 4;
+        scentPins[3] = 5;
+        scentPins[4] = 6;
+        scentPins[5] = UnityEngine.Random.Range(2, 6);
+        scentPins[6] = UnityEngine.Random.Range(2, 6);
+        scentPins[7] = UnityEngine.Random.Range(2, 6);
+        scentPins[8] = UnityEngine.Random.Range(2, 6);
 
         BackgroundDutyCycle[0] = 0.1f;
         BackgroundDutyCycle[1] = 0.4f;
@@ -68,7 +68,7 @@ public class BackgroundController : MonoBehaviour
         BackgroundDutyCycle[3] = 0.5f;
         BackgroundDutyCycle[4] = 0.3f;
 
-        backgroundPin = 6;
+        backgroundPin = 7;
 
         nextButton.SetActive(false);
         intensityButton.SetActive(false);
@@ -152,7 +152,7 @@ public class BackgroundController : MonoBehaviour
         scentPWMactive = true;
         backgroundPWMactive = true;
 
-        while (elapsedTime < 5f)
+        while (elapsedTime < 7f)
         {
             elapsedTime = Time.time - startTime;
             yield return null;
@@ -168,7 +168,7 @@ public class BackgroundController : MonoBehaviour
             }
         }
 
-        if (elapsedTime > 5f && !detectedButtonPressed)
+        if (elapsedTime > 7f && !detectedButtonPressed)
         {
             message = $"{0}{0}{scentPins[currentScent - 1]}{BackgroundDutyCycle[backgroundCount]}{0}";
             arduinoComm.SendMessageToArduino(message);
@@ -203,6 +203,7 @@ public class BackgroundController : MonoBehaviour
 
         message = $"{fan}{off}";
         arduinoComm.SendMessageToArduino(message);
+        yield return new WaitForSeconds(5f);
 
         scentText.gameObject.SetActive(false);
 
